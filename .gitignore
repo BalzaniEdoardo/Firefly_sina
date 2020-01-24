@@ -7,3 +7,4 @@ npy-matlab/*
 .DS_Store
 catstruct/*
 */firefly_monkey/.git/*
+*genpath2/*

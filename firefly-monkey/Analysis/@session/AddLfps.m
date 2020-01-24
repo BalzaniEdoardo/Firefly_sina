@@ -1,6 +1,6 @@
 %% add lfps
 function AddLfps(this,prs)    
-    cd([prs.filepath_neur,'\Sorted']);
+    cd(fullfile(prs.filepath_neur,'Sorted'));
     % determine type of electrode
     linearprobe_type = []; utaharray_type = [];
     for k=1:length(prs.electrode_type)
@@ -9,7 +9,7 @@ function AddLfps(this,prs)
     end
     
     if ~isempty(linearprobe_type) % assume linearprobe is recorded using Plexon
-        cd([prs.filepath_neur,'\PLEXON FILES\Sorted']);
+        cd(fullfile(prs.filepath_neur,'PLEXON FILES','Sorted'));
         brain_area = prs.area{strcmp(prs.electrode_type,prs.linearprobe.types{linearprobe_type})};
         file_ead=dir('*_ead.plx'); file_lfp=dir('*_lfp.plx'); prs.neur_filetype = 'plx';
         % read events
@@ -49,7 +49,7 @@ function AddLfps(this,prs)
         
   
     if ~isempty(utaharray_type) % assume utaharray is recorded using Cereplex
-        cd([prs.filepath_neur,'\Sorted']);
+        cd(fullfile(prs.filepath_neur,'Sorted'));
         file_nev=dir('*.nev'); file_ns1=dir('*.ns1'); prs.neur_filetype = 'nev';
         fprintf(['... reading events from ' file_nev.name '\n']);
         [events_nev,prs] = GetEvents_nev(file_nev.name,prs); % requires package from Blackrock Microsystems: https://github.com/BlackrockMicrosystems/NPMK

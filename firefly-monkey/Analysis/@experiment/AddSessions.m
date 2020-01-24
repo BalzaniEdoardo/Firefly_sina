@@ -13,7 +13,7 @@ else
 end
 prs = default_prs(monk_id,sess_id);
 this.sessions(new_instance) = session(monk_id,sess_id,prs.sess_date);
-this.sessions(new_instance).AddBehaviours(prs);
+% this.sessions(new_instance).AddBehaviours(prs);
 if islfps % load and analyse LFPs
     this.sessions(new_instance).AddLfps(prs);
     this.sessions(new_instance).AnalyseLfps(prs);
