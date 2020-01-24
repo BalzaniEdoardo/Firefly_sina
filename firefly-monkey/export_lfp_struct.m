@@ -6,7 +6,7 @@ base_fold = join(path_split(1:end-1),filesep);
 if ~contains(path,base_fold{1})
     addpath(fullfile(base_fold{1},'genpath2'))
     addpath(genpath2(base_fold{1},{'.git','genpath2'}))
-    savepath
+    
 end
 
 
