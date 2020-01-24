@@ -1,7 +1,7 @@
 %% add units
 function AddUnits(this,prs)
 
-cd([prs.filepath_neur,'\Sorted']);
+cd(fullfile(prs.filepath_neur,'Sorted'));
 % determine type of electrode
 linearprobe_type = []; utaharray_type = [];
 for k=1:length(prs.electrode_type)
@@ -12,7 +12,7 @@ end
 
 if ~isempty(linearprobe_type) % assume linearprobe is recorded using Plexon
     % Need to change directory to Plexon data
-    cd([prs.filepath_neur,'\PLEXON FILES\Sorted']);
+    cd(fullfile(prs.filepath_neur,'PLEXON FILES','Sorted'));
     brain_area = prs.area{strcmp(prs.electrode_type,prs.linearprobe.types{linearprobe_type})};
     file_ead=dir('*_ead.plx'); prs.neur_filetype = 'plx';
     fprintf(['... reading ' file_ead.name '\n']);
@@ -47,7 +47,7 @@ end
 
 if ~isempty(utaharray_type) % assume utaharray is recorded using Cereplex
     % Directory changed back to array data
-    cd([prs.filepath_neur,'\Sorted']);
+    cd(fullfile(prs.filepath_neur,'Sorted'));
     file_nev=dir('*.nev'); prs.neur_filetype = 'nev';
     %     [sua, mua] = GetUnits_phy('spike_times.npy', 'spike_clusters.npy', 'cluster_group.tsv','cluster_location.xls',prs.utaharray.types{utaharray_type}); % requires npy-matlab package: https://github.com/kwikteam/npy-matlab
     [sua, mua] = GetUnits_phy('spike_times.npy', 'spike_clusters.npy', 'cluster_info.tsv',prs.utaharray.types{utaharray_type});
