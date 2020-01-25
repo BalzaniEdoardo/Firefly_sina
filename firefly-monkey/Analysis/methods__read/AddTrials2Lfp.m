@@ -62,19 +62,19 @@ if prs.compute_spectrum
         end
     end
     
-    %% trials (theta-band analytic form)
-    [b,a] = butter(prs.lfp_filtorder,[prs.lfp_theta(1) prs.lfp_theta(2)]/(fs/2));
-    lfp_theta = filtfilt(b,a,lfp);
-    lfp_theta_analytic = hilbert(lfp_theta);
+    %% trials (beta-band analytic form)
+    [b,a] = butter(prs.lfp_filtorder,[prs.lfp_beta(1) prs.lfp_beta(2)]/(fs/2));
+    lfp_beta = filtfilt(b,a,lfp);
+    lfp_beta_analytic = hilbert(lfp_beta);
     for i=1:ntrls
         if ~isnan(trialevents.t_beg(i))
             t_beg = trialevents.t_beg(i) + trials_behv(i).events.t_beg_correction; % correction aligns t_beg with target onset
             t1 = trials_behv(i).continuous.ts(1); % read lfp from first behavioural sample of trial i
             t2 = trials_behv(i).continuous.ts(end); % till last behavioural sample of trial i
-            lfp_raw = lfp_theta_analytic(ts > (t_beg + t1) & ts < (t_beg + t2)); t_raw = linspace(t1,t2,length(lfp_raw));
-            trials(i).lfp_theta = interp1(t_raw,lfp_raw,trials_behv(i).continuous.ts,'linear'); % theta-band LFP
+            lfp_raw = lfp_beta_analytic(ts > (t_beg + t1) & ts < (t_beg + t2)); t_raw = linspace(t1,t2,length(lfp_raw));
+            trials(i).lfp_beta = interp1(t_raw,lfp_raw,trials_behv(i).continuous.ts,'linear'); % theta-band LFP
         else
-            trials(i).lfp_theta = nan(length(trials_behv(i).continuous.ts),1);
+            trials(i).lfp_beta = nan(length(trials_behv(i).continuous.ts),1);
         end
     end
     
