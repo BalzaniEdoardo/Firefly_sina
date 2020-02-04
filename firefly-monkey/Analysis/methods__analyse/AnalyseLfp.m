@@ -14,6 +14,7 @@ event_potential = prs.event_potential;
 compute_spectrum = prs.compute_spectrum;
 analyse_theta = prs.analyse_theta;
 analyse_beta = prs.analyse_beta;
+analyse_alpha = prs.analyse_alpha;
 ntrls = length(trials_lfps);
 fixateduration = prs.fixateduration;
 
@@ -231,6 +232,47 @@ if analyse_beta
             %             veyevel = cellfun(@(x) [0 ; diff(x)'/dt],veye,'UniformOutput',false);
             %             stats.trialtype.(trialtypes{i})(j).continuous.veyevel.betafreq = ...
             %                 ComputeTuning(veyevel,{continuous_temp.ts},{trials_beta_temp.freq},timewindow_move,duration_zeropad,corr_lag,nbootstraps,prs.tuning,prs.tuning_method,prs.binrange.veye_vel);
+        end
+    end
+end
+
+%% alpha LFP
+trials_alpha(ntrls) = struct();
+if analyse_alpha
+    for i=1:ntrls
+        trials_alpha(i).lfp = trials_lfps(i).lfp_alpha(:); % read as column vector
+        alpha_freq = [(1/dt)/(2*pi)*diff(unwrap(angle(trials_alpha(i).lfp))) ; nan];
+        alpha_freq(alpha_freq<prs.lfp_alpha(1) | alpha_freq>prs.lfp_alpha(2)) = nan;
+        trials_alpha(i).freq = alpha_freq;
+    end
+    for i=1%:length(trialtypes)
+        nconds = length(behv_stats.trialtype.(trialtypes{i}));
+        for j=1:nconds
+            trlindx = behv_stats.trialtype.(trialtypes{i})(j).trlindx;
+            events_temp = events(trlindx);
+            continuous_temp = continuous(trlindx);
+            trials_alpha_temp = trials_alpha(trlindx);
+            %% define time windows for computing tuning
+            timewindow_move = [[events_temp.t_move]' [events_temp.t_stop]']; % when the subject is moving
+            %% linear velocity, v
+            stats.trialtype.(trialtypes{i})(j).continuous.v.alphafreq = ...
+                ComputeTuning({continuous_temp.v},{continuous_temp.ts},{trials_alpha_temp.freq},timewindow_move,duration_zeropad,corr_lag,nbootstraps,prs.tuning,prs.tuning_method);
+            %% angular velocity, w
+            stats.trialtype.(trialtypes{i})(j).continuous.w.alphafreq = ...
+                ComputeTuning({continuous_temp.w},{continuous_temp.ts},{trials_alpha_temp.freq},timewindow_move,duration_zeropad,corr_lag,nbootstraps,prs.tuning,prs.tuning_method);
+            %% vw
+            stats.trialtype.(trialtypes{i})(j).continuous.vw.alphafreq = ...
+                ComputeTuning2D({continuous_temp.v},{continuous_temp.w},{continuous_temp.ts},{trials_alpha_temp.freq},timewindow_move,prs.tuning,prs.tuning_method);
+            %% horizontal eye velocity
+            %             heye = cellfun(@(x,y) nanmean([x(:)' ; y(:)']),{continuous_temp.yle},{continuous_temp.yre},'UniformOutput',false); % average both eyes (if available)
+            %             heyevel = cellfun(@(x) [0 ; diff(x)'/dt],heye,'UniformOutput',false);
+            %             stats.trialtype.(trialtypes{i})(j).continuous.heyevel.alphafreq = ...
+            %                 ComputeTuning(heyevel,{continuous_temp.ts},{trials_alpha_temp.freq},timewindow_move,duration_zeropad,corr_lag,nbootstraps,prs.tuning,prs.tuning_method,prs.binrange.heye_vel);
+            %% vertical velocity
+            %             veye = cellfun(@(x,y) nanmean([x(:)' ; y(:)']),{continuous_temp.zle},{continuous_temp.zre},'UniformOutput',false); % average both eyes (if available)
+            %             veyevel = cellfun(@(x) [0 ; diff(x)'/dt],veye,'UniformOutput',false);
+            %             stats.trialtype.(trialtypes{i})(j).continuous.veyevel.alphafreq = ...
+            %                 ComputeTuning(veyevel,{continuous_temp.ts},{trials_alpha_temp.freq},timewindow_move,duration_zeropad,corr_lag,nbootstraps,prs.tuning,prs.tuning_method,prs.binrange.veye_vel);
         end
     end
 end

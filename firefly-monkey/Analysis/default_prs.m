@@ -9,13 +9,13 @@ monkeyInfo = monkeyInfo([monkeyInfo.session_id]==session_id & [monkeyInfo.monk_i
 pc_path = 'Z:\Data\Monkey2_newzdrive';
 mac_path = fullfile('\','Volumes','server','Data','Monkey2_newzdrive');
 if contains(computer,'MAC')
-    prs.filesep = '\';
+    prs.filesep = '/';
     prs.filepath_neur = fullfile(mac_path,monkeyInfo.folder,'neural data',prs.filesep);
     
     prs.filepath_behv = fullfile(mac_path,monkeyInfo.folder,'behavioural data',prs.filesep);
     
 else
-    prs.filesep = '/';
+    prs.filesep = '\';
     prs.filepath_neur = fullfile(pc_path,monkeyInfo.folder,'neural data',prs.filesep);
     prs.filepath_behv = fullfile(pc_path,monkeyInfo.folder,'behavioural data',prs.filesep);
     prs.filepath_neur = prs.filepath_neur{1};

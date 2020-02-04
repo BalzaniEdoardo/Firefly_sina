@@ -9,3 +9,5 @@ catstruct/*
 */firefly_monkey/.git/*
 *genpath2/*
 Matlab Offline Files SDK/*
+*.mat
+*.npy

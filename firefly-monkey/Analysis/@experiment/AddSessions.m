@@ -23,7 +23,7 @@ if isunits % load and analyse neurons
     % This is for export a mat file include all data of a session
     % Need to set prs.extractonly=true in default_prs file, then it ignores all
     if prs.extractonly
-        PrepareData;
+        PrepareData(this);
 %         return
     else
         this.sessions(new_instance).AnalyseUnits(prs);

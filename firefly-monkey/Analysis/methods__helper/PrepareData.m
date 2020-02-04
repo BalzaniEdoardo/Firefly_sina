@@ -1,4 +1,4 @@
-
+function PrepareData(this)
 %% How-to?
 % in default_prs, only enable fitGAM_coupled
 % pause execution of experiments.AddSessions(...,{'behv','lfps','units','pop'}) at line 120 of
@@ -17,13 +17,15 @@
 
 %% convert to struct
 
-for k=1:numel(this.sessions.units), units(k) = struct(this.sessions.units(k)); end
-for k=1:numel(this.sessions.lfps), lfps(k) = struct(this.sessions.lfps(k)); end
-trials_behv= this.sessions.behaviours.trials;
-behv_stats = this.sessions.behaviours.stats;
+for k=1:numel(this.sessions(end).units), units(k) = struct(this.sessions(end).units(k)); end
+for k=1:numel(this.sessions(end).lfps), lfps(k) = struct(this.sessions(end).lfps(k)); end
+trials_behv= this.sessions(end).behaviours.trials;
+behv_stats = this.sessions(end).behaviours.stats;
 
+monk_id = this.sessions(end).monk_id;
+sess_id = this.sessions(end).sess_id;
 exportname = ['m',num2str(monk_id),'s',num2str(sess_id),'.mat'];
-
+prs = default_prs(monk_id,sess_id);
 %% Export after analysis
 
 % for k=1:numel(experiments.sessions.units), units(k) = struct(experiments.sessions.units(k)); end
@@ -48,10 +50,16 @@ if prs.addconcat
     cd(prs.filepath_neur);
     disp(['Saving exported data: ', exportname]);
     save(exportname,'behv_stats','data_concat','lfps','prs','trials_behv','units');
+    
 %     save([prs.sess_date,'.mat'],'behv_stats','data_concat','lfps','prs','trials_behv','units');
 else
     cd(prs.filepath_neur);
     if prs.compute_spectrum
+
+        % flag that determines if it the phase or the analytic signal is extracted 
+        is_phase = false;
+        % extraxt analytic
+
         lfp_beta = struct();
         lfp_theta = struct();
         lfp_alpha = struct();
@@ -64,26 +72,54 @@ else
             lfps_new(ch).channel_id = lfps(ch).channel_id;
             lfps_new(ch).electrode_id = lfps(ch).electrode_id;
             lfps_new(ch).brain_area = lfps(ch).brain_area;
+
+            %lfps_new(ch).stationary = lfps(ch).stationary;
+            %lfps_new(ch).mobile = lfps(ch).mobile;
+            %lfps_new(ch).eyesfixed = lfps.eyesfixed;
+            %lfps_new(ch).eyesfree = lfps.eyesfree;
+            lfps_new(ch).stats = lfps.stats;
             for tr = 1:length(lfps(ch).trials)
-                lfp_beta(ch).trials(tr).lfp_beta = lfps(ch).trials(tr).lfp_beta;
-                lfp_theta(ch).trials(tr).lfp_beta = lfps(ch).trials(tr).lfp_theta;
-                lfp_alpha(ch).trials(tr).lfp_alpha = lfps(ch).trials(tr).lfp_alpha;
+                lfp_beta(ch).trials(tr).lfp_beta = single(lfps(ch).trials(tr).lfp_beta);
+                lfp_theta(ch).trials(tr).lfp_theta = single(lfps(ch).trials(tr).lfp_theta);
+                lfp_alpha(ch).trials(tr).lfp_alpha = single(lfps(ch).trials(tr).lfp_alpha);
                 lfps_new(ch).trials(tr) = rmfield(lfps(ch).trials(tr),{'lfp_beta','lfp_alpha','lfp_theta'});
 
             end
         end
+
+        struct_info = whos('lfp_beta');
+        if struct_info.bytes > 2*10^9
+            is_phase = true;
+            for ch = 1: length(lfps)
+                for tr = 1:length(lfps(ch).trials)
+                    lfp_beta(ch).trials(tr).lfp_beta = angle(lfp_beta(ch).trials(tr).lfp_beta);
+                    lfp_theta(ch).trials(tr).lfp_theta = angle(lfp_theta(ch).trials(tr).lfp_theta);
+                    lfp_alpha(ch).trials(tr).lfp_alpha = angle(lfp_alpha(ch).trials(tr).lfp_alpha);
+                end
+            end
+        end
+        struct_info = whos('lfp_beta');
+        if struct_info.bytes > 2*10^9
+            ME = MException('FileSize', 'file size too large to be saved without -v7.3');
+            throw(ME);
+        end
         
-        lfps = lfp_new;
+        
+        lfps = lfps_new;
         disp(['Saving exported data: ', exportname]);
         save(exportname,'behv_stats','lfps','prs','trials_behv','units');
         exportname2 = ['lfp_beta_','m',num2str(monk_id),'s',num2str(sess_id),'.mat'];
-        save(exportname2,'lfps_beta');
+        save(exportname2,'lfp_beta','is_phase');
         exportname2 = ['lfp_alpha_','m',num2str(monk_id),'s',num2str(sess_id),'.mat'];
-        save(exportname2,'lfps_alpha');
+        save(exportname2,'lfp_alpha','is_phase');
         exportname2 = ['lfp_theta_','m',num2str(monk_id),'s',num2str(sess_id),'.mat'];
-        save(exportname2,'lfps_theta');
+        save(exportname2,'lfp_theta','is_phase');
    else
         disp(['Saving exported data: ', exportname]);
+        
         save(exportname,'behv_stats','lfps','prs','trials_behv','units');
     end
+%     disp(['Saving exported data: ', exportname]);
+%     save(exportname,'behv_stats','lfps','prs','trials_behv','units','-v7.3');
+end
 end

@@ -1,8 +1,8 @@
 %(* ::Package:: *)
 if contains(computer,'MAC')
-    separ = '\';
-else
     separ = '/';
+else
+    separ = '\';
 end
 monkeyInfo = [];
 
