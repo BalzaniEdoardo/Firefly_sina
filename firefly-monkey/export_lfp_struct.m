@@ -19,20 +19,19 @@ w = warning ('off','all');
 %% extract a file
 
 monk_id = 53;
-sess_list = [  108, 109,...
-    110, 111, 113, 114, 115, 128, 132, 133, 134, 136, 120, 123, 124,... 
-       92, 93, 116, 30, 31, 32, 33, 34, 90,99,122,126,127,130];
+sess_list = [47];
 not_done = [];
-
+except_struct = struct();
 for session_id = sess_list
         experiments = experiment('firefly-monkey');
         prs = default_prs(monk_id,session_id);
         try
             experiments.AddSessions(monk_id,session_id,{'behv','units','lfps'});
-        catch
-            disp
+        catch ME
+            str_id = sprintf('m%ds%d',monk_id,session_id);
+            except_struct.(str_id) = ME;
             not_done = [not_done,session_id];
-            save([this_path,separ,'not_done.mat'],'not_done')
+            save([this_path,separ,'not_done.mat'],'not_done','except_struct')
         end
         disp('...clearing exp after session extraction')
         clear experiments

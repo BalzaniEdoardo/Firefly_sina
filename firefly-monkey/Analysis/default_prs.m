@@ -18,8 +18,10 @@ else
     prs.filesep = '\';
     prs.filepath_neur = fullfile(pc_path,monkeyInfo.folder,'neural data',prs.filesep);
     prs.filepath_behv = fullfile(pc_path,monkeyInfo.folder,'behavioural data',prs.filesep);
-    prs.filepath_neur = prs.filepath_neur{1};
-    prs.filepath_behv = prs.filepath_behv{1};
+    if ~(ischar(prs.filepath_neur))
+        prs.filepath_neur = prs.filepath_neur{1};
+        prs.filepath_behv = prs.filepath_behv{1};
+    end
 end
     
 prs.sess_date = datestr(datenum(getnthcell(split(monkeyInfo.folder,prs.filesep),3)));
