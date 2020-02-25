@@ -55,9 +55,11 @@ if prs.addconcat
 else
     cd(prs.filepath_neur);
     if prs.compute_spectrum
+
         % flag that determines if it the phase or the analytic signal is extracted 
         is_phase = false;
         % extraxt analytic
+
         lfp_beta = struct();
         lfp_theta = struct();
         lfp_alpha = struct();
@@ -70,6 +72,7 @@ else
             lfps_new(ch).channel_id = lfps(ch).channel_id;
             lfps_new(ch).electrode_id = lfps(ch).electrode_id;
             lfps_new(ch).brain_area = lfps(ch).brain_area;
+
             %lfps_new(ch).stationary = lfps(ch).stationary;
             %lfps_new(ch).mobile = lfps(ch).mobile;
             %lfps_new(ch).eyesfixed = lfps.eyesfixed;
@@ -83,6 +86,7 @@ else
 
             end
         end
+
         struct_info = whos('lfp_beta');
         if struct_info.bytes > 2*10^9
             is_phase = true;
