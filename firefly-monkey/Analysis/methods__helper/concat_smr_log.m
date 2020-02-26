@@ -3,7 +3,7 @@ function concat_str = concat_smr_log(smr,log)
    fields_smr = fieldnames(smr);
    % empty struct creation
    concat_str = struct();
-   for ii = length(fields_smr)
+   for ii = 1:length(fields_smr)
        % check if field is present in both
        if isfield(log,fields_smr{ii})
             % concat structure
@@ -15,7 +15,7 @@ function concat_str = concat_smr_log(smr,log)
    end
    % get fields of log
    fields_log = fieldnames(log);
-   for ii = length(fields_log)
+   for ii = 1:length(fields_log)
        % check if field is not present in concatenated and add
        if ~isfield(concat_str,fields_log{ii})
            concat_str.(fields_log{ii}) = log.(fields_log{ii});
