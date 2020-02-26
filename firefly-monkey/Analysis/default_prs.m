@@ -18,8 +18,10 @@ else
     prs.filesep = '\';
     prs.filepath_neur = fullfile(pc_path,monkeyInfo.folder,'neural data',prs.filesep);
     prs.filepath_behv = fullfile(pc_path,monkeyInfo.folder,'behavioural data',prs.filesep);
-    prs.filepath_neur = prs.filepath_neur{1};
-    prs.filepath_behv = prs.filepath_behv{1};
+    if ~(ischar(prs.filepath_neur))
+        prs.filepath_neur = prs.filepath_neur{1};
+        prs.filepath_behv = prs.filepath_behv{1};
+    end
 end
     
 prs.sess_date = datestr(datenum(getnthcell(split(monkeyInfo.folder,prs.filesep),3)));
@@ -256,7 +258,7 @@ prs.readout_varname = {'v','w','d','phi','r_targ','theta_targ'}; %,'dv','dw','ey
 
 %% ****which analyses to do****
 %% behavioural
-prs.split_trials = false; % split trials into different stimulus conditions
+prs.split_trials = true; % split trials into different stimulus conditions
 prs.regress_behv = false; % regress response against target position 1
 prs.regress_eye = false; % regress eye position against target position
 
