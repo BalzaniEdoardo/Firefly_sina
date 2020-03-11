@@ -9,7 +9,11 @@ function AddLfps(this,prs)
     end
     
     if ~isempty(linearprobe_type) % assume linearprobe is recorded using Plexon
-        cd(fullfile(prs.filepath_neur,'PLEXON FILES','Sorted'));
+        try
+            cd(fullfile(prs.filepath_neur,'PLEXON FILES','Sorted'));
+        catch
+            cd(fullfile(prs.filepath_neur,'Sorted'));
+        end
         brain_area = prs.area{strcmp(prs.electrode_type,prs.linearprobe.types{linearprobe_type})};
         file_ead=dir('*_ead.plx'); file_lfp=dir('*_lfp.plx'); prs.neur_filetype = 'plx';
         % read events
