@@ -19,7 +19,9 @@ w = warning ('off','all');
 %% extract a file
 
 monk_id = 53;
-sess_list = [46];
+sess_list = [99,127,95,83,84,86,91,92,93,96,97,98,100,105,106,107,108,109,110,111,113,114,...,
+    115,128,132,133,134,136,120,123,124,122,126,130];
+
 not_done = [];
 except_struct = struct();
 for session_id = sess_list

@@ -44,13 +44,13 @@ if ~isempty(duration_zeropad)
     padding = zeros(round(duration_zeropad/dt),1);
     if ~isempty(xt), xt_pad = cell2mat(cellfun(@(x) [padding(:) ; x(:)],xt(:),'UniformOutput',false)); else, xt_pad = []; end % zero-pad for cross-correlations
     if ~isempty(zt), zt_pad = cell2mat(cellfun(@(x) [padding(:) ; x(:)],zt(:),'UniformOutput',false)); else, zt_pad = []; end
-    yt_pad = cell2mat(cellfun(@(x) [padding(:) ; x(:)],yt(:),'UniformOutput',false));
+    yt_pad = cell2mat_singleDouble(cellfun(@(x) [padding(:) ; x(:)],yt(:),'UniformOutput',false));
 elseif ~isempty(duration_nanpad)
     dt = median(diff(ts{1}));
     padding = nan(round(duration_nanpad/dt),1);
     if ~isempty(xt), xt_pad = cell2mat(cellfun(@(x) [padding(:) ; x(:)],xt(:),'UniformOutput',false)); xt_pad = [xt_pad ; padding(:)]; else, xt_pad = []; end % zero-pad for cross-correlations
     if ~isempty(zt), zt_pad = cell2mat(cellfun(@(x) [padding(:) ; x(:)],zt(:),'UniformOutput',false)); zt_pad = [zt_pad ; padding(:)]; else, zt_pad = []; end
-    yt_pad = cell2mat(cellfun(@(x) [padding(:) ; x(:)],yt(:),'UniformOutput',false)); yt_pad = [yt_pad ; padding(:)];
+    yt_pad = cell2mat_singleDouble(cellfun(@(x) [padding(:) ; x(:)],yt(:),'UniformOutput',false)); yt_pad = [yt_pad ; padding(:)];
 else
     xt_pad = [];
     zt_pad = [];
@@ -59,4 +59,4 @@ end
 
 if ~isempty(xt), xt = cell2mat(xt); end
 if ~isempty(zt), zt = cell2mat(zt); end
-yt = cell2mat(yt);
+yt = cell2mat_singleDouble(yt);

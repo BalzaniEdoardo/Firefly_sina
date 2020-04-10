@@ -16,23 +16,22 @@ for tr_ind = sele
     x = r_stop .* cos(theta_stop/360*pi*2);
     y = r_stop .* sin(theta_stop/360*pi*2);
     
-    v_x = trials_behv(tr_ind).events.w; % v sin(theta)/r
-    v_y = trials_behv(tr_ind).events.v; % v cos(theta)
-    v_ang = sqrt(v_x.^2 + v_y.^2).*sin(theta_stop)/r_stop;
     
-    figure
-%     plot(x,y)
-% %     hold on 
+   
     i_start = find(trials_behv(tr_ind).continuous.ts >= t_start,1)+1;
     i_stop = find(trials_behv(tr_ind).continuous.ts <= t_stop,1,'last');
+     figure
+    subplot(121)
+    plot(x(i_start:i_stop),y(i_start:i_stop))
+    hold on 
 %     plot([x(i_start),x(i_start)],[min(y),max(y)])
 %     plot([x(i_stop),x(i_stop)],[min(y),max(y)])
-    subplot(121)
-    title('v ang')
-    plot(v_ang(i_start:i_stop))
     subplot(122)
-    title('r')
-    plot(r_stop(i_start:i_stop))
+%     title('v ang')
+    plot(trials_behv(tr_inf))(i_start:i_stop))
+%     subplot(122)
+%     title('r')
+%     plot(r_stop(i_start:i_stop))
     [r_stop(i_stop),theta_stop(i_stop)]
 end
 
