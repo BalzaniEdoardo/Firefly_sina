@@ -22,6 +22,7 @@ for i=1:ntrls
         t_indx = find(ts{i}>(t_sac2 + saccade_duration), 1);
         xt(i) = x_fly{i}(t_indx); yt(i) = y_fly{i}(t_indx);
         % ground truth prediction for eye position (if the monkey really followed the target)
+        ts_trial{i} = ts{i}(t_indx);
         yle_pred(i) = atan2d(xt(i) + delta, sqrt(yt(i)^2 + zt^2));
         yre_pred(i) = atan2d(xt(i) - delta, sqrt(yt(i)^2 + zt^2));
         zle_pred(i) = atan2d(zt , sqrt(yt(i)^2 + (xt(i) + delta)^2));
@@ -75,7 +76,7 @@ eye_fixation.eyepos.true.ver_mean.val = ver_mean;
 eye_fixation.eyepos.true.hor_mean.val = hor_mean;
 eye_fixation.eyepos.true.ver_diff.val = ver_diff;
 eye_fixation.eyepos.true.hor_diff.val = hor_diff;
-
+eye_fixation.ts = ts_trial;
 %% component-wise correlation between predicted and true eye positions
 [eye_fixation.eyepos.pred_vs_true.ver_mean.rho,eye_fixation.eyepos.pred_vs_true.ver_mean.pval] = corr(ver_mean_pred(:),ver_mean(:),'rows','complete');
 [eye_fixation.eyepos.pred_vs_true.hor_mean.rho,eye_fixation.eyepos.pred_vs_true.hor_mean.pval] = corr(hor_mean_pred(:),hor_mean(:),'rows','complete');

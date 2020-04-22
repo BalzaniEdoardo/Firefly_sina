@@ -45,7 +45,7 @@ for i=1:ntrls
     pretrial = 0; posttrial = 0;
     % select data between target fixation and end of movement
     timeindx = find(ts{i}>(t_fix(i)-pretrial) & ts{i}<(t_stop(i)+posttrial));
-    
+    ts_trial{i} = ts{i}(timeindx);
     % target position
     xt{i} = x_fly{i}(timeindx); yt{i} = y_fly{i}(timeindx);
     xt{i}(isnan(xt{i})) = xt{i}(find(~isnan(xt{i}),1)); yt{i}(isnan(yt{i})) = yt{i}(find(~isnan(yt{i}),1));
@@ -97,11 +97,57 @@ for i=1:ntrls
 end
 
 %% save saccadic eye movements
-eye_movement.saccade.true.val = cell2mat(sacxy);
-eye_movement.saccade.true.dir = cell2mat(sacdir);
-eye_movement.saccade.pred.val = cell2mat(sacxy_pred);
-eye_movement.saccade.pred.dir = cell2mat(sacdir_pred);
-eye_movement.saccade.time = cell2mat(sac_time);
+sacxy_tmp = [];
+sacdir_tmp = [];
+sacxy_pred_tmp = [];
+sacdir_pred_tmp = [];
+sac_time_tmp = [];
+for k =1:ntrls
+    sacxy_tmp = [sacxy_tmp, sacxy{k}];
+    sacdir_tmp = [sacdir_tmp, sacdir{k}];
+    sacxy_pred_tmp = [sacxy_pred_tmp, sacxy_pred{k}];
+    sacdir_pred_tmp = [sacdir_pred_tmp, sacdir_pred{k}];
+    sac_time_tmp = [sac_time_tmp, sac_time{k}];
+end
+
+
+% keep_sacxy_ind = [];
+% for ii =1:length(sacxy)
+%     if size(sacxy{ii},1) == 2
+%         keep_sacxy_ind = [keep_sacxy_ind ii];
+%     end
+% end
+% sacxy_tmp = {};
+% sacdir_tmp = {};
+% sacxy_pred_tmp = {};
+% sacdir_pred_tmp = {};
+% sac_time_tmp = {};
+% for ii = keep_sacxy_ind
+%     sacxy_tmp{length(sacxy_tmp)+1} = sacxy{ii};
+%     sacdir_tmp{length(sacdir_tmp)+1} = sacdir{ii};
+%     sacxy_pred_tmp{length(sacxy_pred_tmp)+1} = sacxy_pred{ii};
+%     sacdir_pred_tmp{length(sacdir_pred_tmp)+1} = sacdir_pred{ii};
+%     sac_time_tmp{length(sac_time_tmp)+1} = sac_time{ii};
+% end
+
+
+sacxy = sacxy_tmp;
+sacdir = sacdir_tmp;
+sacxy_pred = sacxy_pred_tmp;
+sacdir_pred = sacdir_pred_tmp;
+sac_time = sac_time_tmp;
+
+% eye_movement.saccade.true.val = cell2mat(sacxy);
+% eye_movement.saccade.true.dir = cell2mat(sacdir);
+% eye_movement.saccade.pred.val = cell2mat(sacxy_pred);
+% eye_movement.saccade.pred.dir = cell2mat(sacdir_pred);
+% eye_movement.saccade.time = cell2mat(sac_time);
+
+eye_movement.saccade.true.val = sacxy;
+eye_movement.saccade.true.dir = sacdir;
+eye_movement.saccade.pred.val = sacxy_pred;
+eye_movement.saccade.pred.dir = sacdir_pred;
+eye_movement.saccade.time = sac_time;
 
 %% correlation between behv error and eye-movement prediction error
 eye_mean_err = nan(ntrls, 1);
@@ -114,16 +160,32 @@ eye_movement.eyepos.behvcorr.eye_err = eye_mean_err; eye_movement.eyepos.behvcor
 
 %% save true and predicted eye positions
 for i=1:ntrls
-    eye_movement.flypos.r{i} = decimate(rt{i},factor_downsample);
-    eye_movement.flypos.theta{i} = decimate(thetat{i},factor_downsample);
-    eye_movement.eyepos.pred.ver_mean.val{i} = decimate(ver_mean_pred{i},factor_downsample);
-    eye_movement.eyepos.pred.hor_mean.val{i} = decimate(hor_mean_pred{i},factor_downsample);
-    eye_movement.eyepos.pred.ver_diff.val{i} = decimate(ver_diff_pred{i},factor_downsample);
-    eye_movement.eyepos.pred.hor_diff.val{i} = decimate(hor_diff_pred{i},factor_downsample);
-    eye_movement.eyepos.true.ver_mean.val{i} = decimate(ver_mean{i},factor_downsample);
-    eye_movement.eyepos.true.hor_mean.val{i} = decimate(hor_mean{i},factor_downsample);
-    eye_movement.eyepos.true.ver_diff.val{i} = decimate(ver_diff{i},factor_downsample);
-    eye_movement.eyepos.true.hor_diff.val{i} = decimate(hor_diff{i},factor_downsample);
+    if length(rt{i}) ~= 0
+        eye_movement.flypos.r{i} = decimate(double(rt{i}),factor_downsample);
+        eye_movement.flypos.theta{i} = decimate(double(thetat{i}),factor_downsample);
+        eye_movement.eyepos.pred.ver_mean.val{i} = decimate(double(ver_mean_pred{i}),factor_downsample);
+        eye_movement.eyepos.pred.hor_mean.val{i} = decimate(double(hor_mean_pred{i}),factor_downsample);
+        eye_movement.eyepos.pred.ver_diff.val{i} = decimate(double(ver_diff_pred{i}),factor_downsample);
+        eye_movement.eyepos.pred.hor_diff.val{i} = decimate(double(hor_diff_pred{i}),factor_downsample);
+        eye_movement.eyepos.true.ver_mean.val{i} = decimate(double(ver_mean{i}),factor_downsample);
+        eye_movement.eyepos.true.hor_mean.val{i} = decimate(double(hor_mean{i}),factor_downsample);
+        eye_movement.eyepos.true.ver_diff.val{i} = decimate(double(ver_diff{i}),factor_downsample);
+        eye_movement.eyepos.true.hor_diff.val{i} = decimate(double(hor_diff{i}),factor_downsample);
+        eye_movement.ts{i} = ts_trial{i};
+    else
+        eye_movement.flypos.r{i} = [];
+        eye_movement.flypos.theta{i} = [];
+        eye_movement.eyepos.pred.ver_mean.val{i} = [];
+        eye_movement.eyepos.pred.hor_mean.val{i} = [];
+        eye_movement.eyepos.pred.ver_diff.val{i} = [];
+        eye_movement.eyepos.pred.hor_diff.val{i} = [];
+        eye_movement.eyepos.true.ver_mean.val{i} = [];
+        eye_movement.eyepos.true.hor_mean.val{i} = [];
+        eye_movement.eyepos.true.ver_diff.val{i} = [];
+        eye_movement.eyepos.true.hor_diff.val{i} = [];
+        eye_movement.ts{i} = [];
+        
+    end
 end
 
 Nt = max(cellfun(@(x) length(x),rt)); % max number of timepoints

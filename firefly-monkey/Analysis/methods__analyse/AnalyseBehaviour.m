@@ -201,7 +201,14 @@ end
 %% linear regression, ROC analysis, error distribution, ptb-triggered average
 if prs.regress_behv && ~prs.extractonly
     trialtypes = fields(stats.trialtype);
-    for i=[1 2 8]
+    if length(trialtypes) == 1
+        array_i = 1;
+    else
+        array_i = [1 2 8];
+    end
+    
+    for i = array_i
+        
         nconds = length(stats.trialtype.(trialtypes{i}));
         if ~strcmp((trialtypes{i}),'all') && nconds==1, copystats = true; else, copystats = false; end % only one condition means variable was not manipulated
         for j=1:nconds

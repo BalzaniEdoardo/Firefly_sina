@@ -132,16 +132,35 @@ end
 %% regression
 hor_error = []; ver_error = [];
 mag_error = []; dir_error = []; 
+sacxy = [];
+dir_sac = [];
 for k=1:ntrls
     ver_error = [ver_error cell2mat(trackingerror.ver{k})]; 
     hor_error = [hor_error cell2mat(trackingerror.hor{k})];     
     mag_error = [mag_error cell2mat(trackingerror.mag{k})]; 
-    dir_error = [dir_error cell2mat(trackingerror.dir{k})]; 
+    dir_error = [dir_error cell2mat(trackingerror.dir{k})];
+    sacxy = [sacxy corrective.sacxy{k}];
+    dir_sac = [dir_sac corrective.sacdir{k}];
 end
-sacxy = cell2mat(corrective.sacxy);
+% sacxy = corrective.sacxy;
+% sacdir = corrective.sacdir;
+% 
+% keep_sacxy_ind = [];
+% for ii =1:length(sacxy)
+%     if size(sacxy{ii},1) == 2
+%         keep_sacxy_ind = [keep_sacxy_ind ii];
+%     end
+% end
+% sacxy_tmp = {};
+% sacdir_tmp = {};
+% 
+% for ii = keep_sacxy_ind
+%     sacxy_tmp{length(sacxy_tmp)+1} = sacxy{ii};
+%     sacdir_tmp{length(sacdir_tmp)+1} = sacdir{ii};
+% end
+% sacxy = cell2mat(sacxy_tmp);
 ver_sac = sacxy(1,:); hor_sac = sacxy(2,:);
-mag_sac = sqrt(sum(cell2mat(corrective.sacxy).^2));
-dir_sac = cell2mat(corrective.sacdir);
+mag_sac = sqrt(sum(sacxy.^2));
 
 trackingerror.ridgeregress.ver = ridge(ver_sac(:),ver_error',5e3);
 trackingerror.ridgeregress.hor = ridge(hor_sac(:),hor_error',5e3);

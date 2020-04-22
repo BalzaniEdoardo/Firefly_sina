@@ -1,12 +1,25 @@
 function trials = AddTrials2Behaviour(prs)
 
 trials = []; % initialise
-
+cd(prs.filepath_behv)
 %% list all files to read
 flist_log=dir('*.log'); 
-for i=1:length(flist_log), fnum_log(i) = str2num(flist_log(i).name(end-6:end-4)); end
+
+for i=1:length(flist_log)
+    splt = split(flist_log(i).name,'c');
+    splt = splt{2};
+    splt = split(splt,'.');
+    splt = splt{1};
+    fnum_log(i) = str2num(splt); 
+end
 flist_smr=dir('*.smr');
-for i=1:length(flist_smr), fnum_smr(i) = str2num(flist_smr(i).name(end-6:end-4)); end
+for i=1:length(flist_smr)
+    splt = split(flist_smr(i).name,'c');
+    splt = splt{2};
+    splt = split(splt,'.');
+    splt = splt{1};
+    fnum_smr(i) = str2num(splt);
+end
 % flist_mat=dir('*.mat');
 % for i=1:length(flist_mat), fnum_mat(i) = str2num(flist_mat(i).name(end-6:end-4)); end
 nfiles = length(flist_log);
