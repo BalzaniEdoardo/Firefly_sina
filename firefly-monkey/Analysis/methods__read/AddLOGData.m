@@ -58,6 +58,8 @@ while newline ~= -1
     trials(count).logical.firefly_fullON = nan;
     trials(count).prs.stop_duration = stop_duration;
     trials(count).logical.replay = replay_movie;
+    trials(count).logical.landmark_fixedground = nan;
+    
     trials(count).prs.v_max = v_max; % cm/s (default 200) 
     trials(count).prs.w_max = w_max; % deg/s (default 90)
     trials(count).prs.reward_duration = reward_duration; % ms (default 150)
@@ -96,6 +98,7 @@ while newline ~= -1
         trials(count).prs.stop_duration = stop_duration;
     end
     %% check for fixed ground
+
     if newline == -1, break; end
     if ~strcmp(newline(1:9),'Trial Num')        
         if isempty(fixed_ground)
