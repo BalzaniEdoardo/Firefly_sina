@@ -58,7 +58,7 @@ while newline ~= -1
     trials(count).logical.firefly_fullON = nan;
     trials(count).prs.stop_duration = stop_duration;
     trials(count).logical.replay = replay_movie;
-    trials(count).logical.landmark_fixedground = nan;
+    trials(count).logical.landmark_fixedground = false;% #$%^&&^&*^danger - change false to nan immediately (what if field missing from log file??)
     
     trials(count).prs.v_max = v_max; % cm/s (default 200) 
     trials(count).prs.w_max = w_max; % deg/s (default 90)

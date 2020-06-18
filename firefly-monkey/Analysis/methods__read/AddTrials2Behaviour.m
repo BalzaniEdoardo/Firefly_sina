@@ -7,11 +7,17 @@ flist_log=dir('*.log');
 
 for i=1:length(flist_log)
     % get idx letter
-    idx_letters = regexp(flist_log(i).name,'[a-zA-Z]');
+    if contains(flist_log(i).name,'replay')
+        splt = split(flist_log(i).name,'replay_');
+        filename = splt{2};
+    else
+        filename = flist_log(i).name;
+    end
+    idx_letters = regexp(filename,'[a-zA-Z]');
     % first should be m and the last 3 should be log
     idx_letters = idx_letters(2:end-3);
-    delim = flist_log(i).name(idx_letters);
-    splt = split(flist_log(i).name,delim);
+    delim = filename(idx_letters);
+    splt = split(filename,delim);
     splt = splt{2};
     splt = split(splt,'.');
     splt = splt{1};
@@ -23,7 +29,7 @@ for i=1:length(flist_smr)
     idx_letters = regexp(flist_smr(i).name,'[a-zA-Z]');
     % first should be m and the last 3 should be smr
     idx_letters = idx_letters(2:end-3);
-    delim = flist_log(i).name(idx_letters);
+    delim = flist_smr(i).name(idx_letters);
     splt = split(flist_smr(i).name,delim);
     splt = splt{2};
     splt = split(splt,'.');
