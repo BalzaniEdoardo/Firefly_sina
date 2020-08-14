@@ -2,7 +2,7 @@
 clear all
 clc
 addpath(genpath('/Users/edoardo/Work/Code/Firefly_sina/'));
-folder = '/Volumes/WD Edo/firefly_analysis/LFP_band/DATASET/PPC+PFC+MST/';
+folder = '/Volumes/WD Edo/firefly_analysis/LFP_band/DATASET/PPC+PFC/';
 
 % get session done
 listing = dir(folder);

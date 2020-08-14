@@ -122,6 +122,13 @@ while newline ~= -1
             trials(count).logical.firefly_fullON = false;
         end
     end
+    while ~(contains(newline,'Joy Stick Gain:') || contains(newline,'Trial Num')  || all(newline == -1))
+        newline = fgetl(fid);
+    end
+    if length(newline) >= 15 && strcmp(newline(1:15),'Joy Stick Gain:')
+            trials(count).logical.joystick_gain = str2num(newline(16:end));
+            newline = fgetl(fid);
+    end
 end
 
 %% firefly status from mat file if not available in log file

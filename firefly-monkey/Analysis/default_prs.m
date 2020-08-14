@@ -7,12 +7,16 @@ getnthcell = @(x,n) x{n};
 monkeyInfoFile_joysticktask;
 monkeyInfo = monkeyInfo([monkeyInfo.session_id]==session_id & [monkeyInfo.monk_id]==monk_id);
 pc_path = 'Z:\Data\Monkey2_newzdrive';
-mac_path = fullfile('\','Volumes','server','Data','Monkey2_newzdrive');
+mac_path = fullfile('/','Volumes','server','Data','Monkey2_newzdrive');
 if contains(computer,'MAC')
     prs.filesep = '/';
     prs.filepath_neur = fullfile(mac_path,monkeyInfo.folder,'neural data',prs.filesep);
     
     prs.filepath_behv = fullfile(mac_path,monkeyInfo.folder,'behavioural data',prs.filesep);
+    if ~(ischar(prs.filepath_neur))
+        prs.filepath_neur = prs.filepath_neur{1};
+        prs.filepath_behv = prs.filepath_behv{1};
+    end
     
 else
     prs.filesep = '\';
@@ -23,8 +27,11 @@ else
         prs.filepath_behv = prs.filepath_behv{1};
     end
 end
-    
-prs.sess_date = datestr(datenum(getnthcell(split(monkeyInfo.folder,prs.filesep),3)));
+try
+    prs.sess_date = datestr(datenum(getnthcell(split(monkeyInfo.folder,prs.filesep),3)));
+catch
+    prs.sess_date = datestr(datenum(getnthcell(split(monkeyInfo.folder,prs.filesep),4)));
+end
 prs.coord = monkeyInfo.coord;
 prs.units = monkeyInfo.units;
 prs.electrode_type = monkeyInfo.electrode_type;
