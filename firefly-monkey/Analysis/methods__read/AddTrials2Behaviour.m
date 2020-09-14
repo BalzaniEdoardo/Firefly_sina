@@ -45,7 +45,7 @@ cnt_tr = 0;
 for i=1:nfiles
     fprintf(['... reading ' flist_log(i).name '\n']);
     % read .log file
-    trials_log = AddLOGData(flist_log(i).name);
+    trials_log = AddLOGData(flist_log(i).name,prs);
     % read all .smr files associated with this log file
     if i<nfiles, indx_smr = find(fnum_smr >= fnum_log(i) & fnum_smr < fnum_log(i+1));
     else indx_smr = find(fnum_smr >= fnum_log(i)); end

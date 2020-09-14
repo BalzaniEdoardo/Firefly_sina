@@ -18,8 +18,8 @@ w = warning ('off','all');
 
 %% extract a file
 
-monk_id = 51;
-sess_list = [120];
+monk_id = 91;
+sess_list = [25];
 
 not_done = [];
 except_struct = struct();

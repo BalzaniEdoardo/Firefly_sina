@@ -1,4 +1,4 @@
-function trials = AddLOGData(file)
+function trials = AddLOGData(file,prs)
 
 % the logic of this function is complicated because of several changes
 % that were made to the format of the log files since the experiment's
@@ -114,17 +114,31 @@ while newline ~= -1
     newline = fgetl(fid);
     if all(newline ~= -1) && strcmp(newline(1:7),'Firefly') &&  (str2double(newline(9))==0 || str2double(newline(9))==1)
         FFparams = split(newline,' ');
-        trials(count).prs.xfp = str2double(FFparams{7}); 
-        trials(count).prs.yfp = str2double(FFparams{8});
-        trials(count).prs.reward_duration = str2double(FFparams{9});
+        trials(count).prs.xfp = str2double(FFparams{prs.FFparams_xpos}); 
+        trials(count).prs.yfp = str2double(FFparams{prs.FFparams_ypos});
+        trials(count).prs.reward_duration = str2double(FFparams{prs.FFparams_rewardDur});
+        
+        
         % status not avilable in new log file (assuming always OFF)
         if isnan(trials(count).logical.firefly_fullON)
             trials(count).logical.firefly_fullON = false;
         end
     end
-    while ~(contains(newline,'Joy Stick Gain:') || contains(newline,'Trial Num')  || all(newline == -1))
-        newline = fgetl(fid);
+    if newline ~= -1
+        while ~(contains(newline,'Joy Stick Gain:') || contains(newline,'Trial Num')  || all(newline == -1))
+            newline = fgetl(fid);
+            if all(newline == -1)
+                break
+            end
+        end
     end
+    if newline == -1, break; end
+%     if contains(newline,'Trial Num')
+%         splt = split(newline,'Trial Num# ');
+%         if str2num(splt{2}) == 750
+%             splt
+%         end
+%     end
     if length(newline) >= 15 && strcmp(newline(1:15),'Joy Stick Gain:')
             trials(count).logical.joystick_gain = str2num(newline(16:end));
             newline = fgetl(fid);

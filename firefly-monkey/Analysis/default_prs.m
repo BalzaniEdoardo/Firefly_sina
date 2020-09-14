@@ -11,13 +11,16 @@ mac_path = fullfile('/','Volumes','server','Data','Monkey2_newzdrive');
 if contains(computer,'MAC')
     prs.filesep = '/';
     prs.filepath_neur = fullfile(mac_path,monkeyInfo.folder,'neural data',prs.filesep);
-    
     prs.filepath_behv = fullfile(mac_path,monkeyInfo.folder,'behavioural data',prs.filesep);
+    
+    
+    
     if ~(ischar(prs.filepath_neur))
         prs.filepath_neur = prs.filepath_neur{1};
         prs.filepath_behv = prs.filepath_behv{1};
     end
-    
+    prs.filepath_neur = strrep(prs.filepath_neur,'\','/');
+    prs.filepath_behv = strrep(prs.filepath_behv,'\','/');
 else
     prs.filesep = '\';
     prs.filepath_neur = fullfile(pc_path,monkeyInfo.folder,'neural data',prs.filesep);
@@ -26,11 +29,21 @@ else
         prs.filepath_neur = prs.filepath_neur{1};
         prs.filepath_behv = prs.filepath_behv{1};
     end
+    prs.filepath_neur = strrep(prs.filepath_neur,'/','\');
+    prs.filepath_behv = strrep(prs.filepath_behv,'/','\');
 end
 try
-    prs.sess_date = datestr(datenum(getnthcell(split(monkeyInfo.folder,prs.filesep),3)));
+    if contains(monkeyInfo.folder,'/')
+        prs.sess_date = datestr(datenum(getnthcell(split(monkeyInfo.folder,'/'),3)));
+    else
+        prs.sess_date = datestr(datenum(getnthcell(split(monkeyInfo.folder,'\'),3)));
+    end
 catch
-    prs.sess_date = datestr(datenum(getnthcell(split(monkeyInfo.folder,prs.filesep),4)));
+    if contains(monkeyInfo.folder,'/')
+        prs.sess_date = datestr(datenum(getnthcell(split(monkeyInfo.folder,'/'),4)));
+    else
+        prs.sess_date = datestr(datenum(getnthcell(split(monkeyInfo.folder,'\'),4)));
+    end
 end
 prs.coord = monkeyInfo.coord;
 prs.units = monkeyInfo.units;
@@ -41,6 +54,24 @@ prs.eyechannels = monkeyInfo.eyechannels;
 prs.extractonly = true; % Extract trials and exit
 prs.addconcat = false; % Add concatenated trial to extract
 
+% check if there are info about the FF params
+list_fields = fieldnames(monkeyInfo);
+flag_ffpars = false;
+for field = list_fields'
+    if contains(field{1},'FFparams_')
+        flag_ffpars = true;
+        break
+    end
+end
+if flag_ffpars
+    prs.FFparams_xpos = monkeyInfo.FFparams_xpos;
+    prs.FFparams_ypos = monkeyInfo.FFparams_ypos;
+    prs.FFparams_rewardDur = monkeyInfo.FFparams_rewardDur;
+else
+    prs.FFparams_xpos = 7;
+    prs.FFparams_ypos = 8;
+    prs.FFparams_rewardDur = 9;
+end
 %% data acquisition parameters
 prs.fs_smr = 5000/6; % sampling rate of smr file
 prs.fs_lfp = 500; % sampling rate of lfp file
