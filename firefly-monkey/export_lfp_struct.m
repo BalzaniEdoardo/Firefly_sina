@@ -16,6 +16,10 @@ end
 
 w = warning ('off','all');
 
+%% load and save the monkey info
+monkeyInfoFile_joysticktask;
+save('monkey_info.mat','monkeyInfo')
+
 %% extract a file
 
 monk_id = 91;
