@@ -7245,9 +7245,9 @@ monkeyInfo (end).comments = {'fixed density, no landmarks, no ptb, random DCI, r
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 2
@@ -7262,9 +7262,9 @@ monkeyInfo (end).comments = {'fixed density, no landmarks, no ptb, random DCI, r
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 3
@@ -7294,9 +7294,9 @@ monkeyInfo (end).comments = {'fixed density, no landmarks, no ptb, random DCI, r
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 5
@@ -7311,9 +7311,9 @@ monkeyInfo (end).comments = {'fixed density, no landmarks, no ptb, random DCI, r
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 6
@@ -7328,9 +7328,9 @@ monkeyInfo (end).comments = {'gain manipulation,fixed density, no landmarks, no 
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 7
@@ -7345,9 +7345,9 @@ monkeyInfo (end).comments = {'gain manipulation,fixed density, no landmarks, no 
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 8
@@ -7362,9 +7362,9 @@ monkeyInfo (end).comments = {'gain manipulation,fixed density, no landmarks, no 
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 9
@@ -7379,9 +7379,9 @@ monkeyInfo (end).comments = {'fixed density, no landmarks, no ptb, random DCI, r
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 10
@@ -7396,9 +7396,9 @@ monkeyInfo (end).comments = {'perturbations, fixed density, no landmarks, random
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 11
@@ -7413,9 +7413,9 @@ monkeyInfo (end).comments = {'perturbations, fixed density, no landmarks, random
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 12
@@ -7430,9 +7430,9 @@ monkeyInfo (end).comments = {'fixed density, no landmarks, no ptb, random DCI, r
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 13
@@ -7447,9 +7447,9 @@ monkeyInfo (end).comments = {'gain manipulation,fixed density, no landmarks, no 
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 14
@@ -7464,9 +7464,9 @@ monkeyInfo (end).comments = {'perturbations, fixed density, no landmarks, random
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 15
@@ -7481,9 +7481,9 @@ monkeyInfo (end).comments = {'fixed density, no landmarks, no ptb, random DCI, r
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 16
@@ -7498,9 +7498,9 @@ monkeyInfo (end).comments = {'fixed density, no landmarks, no ptb, random DCI, r
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 17
@@ -7515,9 +7515,9 @@ monkeyInfo (end).comments = {'gain manipulation,fixed density, no landmarks, no 
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 18
@@ -7532,9 +7532,9 @@ monkeyInfo (end).comments = {'gain manipulation,fixed density, no landmarks, no 
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 19
@@ -7549,9 +7549,9 @@ monkeyInfo (end).comments = {'gain manipulation,fixed density, no landmarks, no 
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 20
@@ -7566,9 +7566,9 @@ monkeyInfo (end).comments = {'perturbations,fixed density, no landmarks, random 
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 21
@@ -7583,9 +7583,9 @@ monkeyInfo (end).comments = {'perturbations,fixed density, no landmarks, random 
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 22
@@ -7600,9 +7600,9 @@ monkeyInfo (end).comments = {'perturbations,fixed density, no landmarks, random 
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 23
@@ -7617,9 +7617,9 @@ monkeyInfo (end).comments = {'perturbations,fixed density, no landmarks, random 
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 24
@@ -7634,9 +7634,9 @@ monkeyInfo (end).comments = {'perturbations,fixed density, no landmarks, random 
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 25
@@ -7651,9 +7651,9 @@ monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, r
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
 
 %% session 26
@@ -7668,7 +7668,7 @@ monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, r
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-monkeyInfo.FFparams_xpos = 4;
-monkeyInfo.FFparams_ypos = 5;
-monkeyInfo.FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
 
