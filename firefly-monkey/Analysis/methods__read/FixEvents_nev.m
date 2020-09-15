@@ -26,7 +26,7 @@ else
         badindx = (iti_smr>10 | iti_nev>10);
         iti_smr = iti_smr(~badindx); iti_nev = iti_nev(~badindx);
         trial_start = 1;
-        while corr(iti_smr(trial_start:trial_start+100)',iti_nev(trial_start:trial_start+100)') > 0.95 && trial_start <= (length(iti_nev)-100)
+        while corr(iti_smr(trial_start:min(trial_start+100, length(iti_smr)))',iti_nev(trial_start: min(trial_start+100, length(iti_smr)))') > 0.95 && trial_start <= (length(iti_nev)-100)
             trial_start = trial_start + 1;
         end
         trial_end = trial_start - 1;

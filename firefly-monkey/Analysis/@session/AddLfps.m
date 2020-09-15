@@ -57,6 +57,16 @@ function AddLfps(this,prs)
         file_nev=dir('*.nev'); file_ns1=dir('*.ns1'); prs.neur_filetype = 'nev';
         fprintf(['... reading events from ' file_nev.name '\n']);
         [events_nev,prs] = GetEvents_nev(file_nev.name,prs); % requires package from Blackrock Microsystems: https://github.com/BlackrockMicrosystems/NPMK
+        t_end_nev = [events_nev.t_end];
+        t_beg_nev = [events_nev.t_beg];
+        if length(t_beg_nev) > length(t_end_nev)
+            if all(t_end_nev - t_beg_nev(1:length(t_end_nev)) > 0)
+               events_nev.t_beg = t_beg_nev(1:length(t_end_nev));
+            elseif all(t_end_nev - t_beg_nev(length(t_beg_nev)-length(t_end_nev)+1:end) > 0)
+                events_nev.t_beg = t_beg_nev(length(t_beg_nev)-length(t_end_nev)+1:end);
+            end
+        end
+        
         if length(this.behaviours.trials)~=length(events_nev.t_end)
             events_nev = FixEvents_nev(events_nev,this.behaviours.trials);
         end
