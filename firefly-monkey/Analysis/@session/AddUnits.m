@@ -54,6 +54,15 @@ if ~isempty(utaharray_type) % assume utaharray is recorded using Cereplex
     brain_area = prs.area{strcmp(prs.electrode_type,prs.utaharray.types{utaharray_type})};
     fprintf(['... reading events from ' file_nev.name '\n']);
     [events_nev,prs] = GetEvents_nev(file_nev.name,prs); % requires package from Blackrock Microsystems: https://github.com/BlackrockMicrosystems/NPMK
+    t_end_nev = [events_nev.t_end];
+    t_beg_nev = [events_nev.t_beg];
+    if length(t_beg_nev) > length(t_end_nev)
+            if all(t_end_nev - t_beg_nev(1:length(t_end_nev)) > 0)
+               events_nev.t_beg = t_beg_nev(1:length(t_end_nev));
+            elseif all(t_end_nev - t_beg_nev(length(t_beg_nev)-length(t_end_nev)+1:end) > 0)
+                events_nev.t_beg = t_beg_nev(length(t_beg_nev)-length(t_end_nev)+1:end);
+            end
+    end
     prs.fs_spk = 30000;
     if length(this.behaviours.trials)~=length(events_nev.t_end)
         events_nev = FixEvents_nev(events_nev,this.behaviours.trials);
