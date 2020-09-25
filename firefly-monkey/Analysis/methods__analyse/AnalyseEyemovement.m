@@ -29,7 +29,7 @@ for i=1:ntrls
                 sum(abs(zre{i}(sacstart(j)) - zre{i}(sacend(j)))^2 + abs(yre{i}(sacstart(j)) - yre{i}(sacend(j)))^2)]);
         end
         t_fix(i) = t_sacs(sacampli == max(sacampli)) + saccade_duration/2;
-    else, t_fix(i) = 0 + saccade_duration/2; 
+    else, t_fix(i) = 0 + saccade_duration/2;
     end % if no saccade detected, assume monkey was already fixating on target
     % remove saccade periods from eye position data
     sacstart = []; sacend = [];
@@ -41,7 +41,7 @@ for i=1:ntrls
         zle{i}(sacstart(j):sacend(j)) = nan; % left eye vertical position
         zre{i}(sacstart(j):sacend(j)) = nan; % right eye vertical position
     end
-%     t_fix(i) = 0;
+    %     t_fix(i) = 0;
     pretrial = 0; posttrial = 0;
     % select data between target fixation and end of movement
     timeindx = find(ts{i}>(t_fix(i)-pretrial) & ts{i}<(t_stop(i)+posttrial));
@@ -220,10 +220,31 @@ obs = [zeros(zeropad_length,ntrls); hor_mean1; zeros(zeropad_length,ntrls)];  ob
 eye_movement.eyepos.pred_vs_true.hor_mean.xcorr.c_shuffled = xcorr(pred_shuffled,obs,400,'coeff');
 
 % timecourse of component-wise corr between predicted & true eye position
-[eye_movement.eyepos.pred_vs_true.ver_mean.rho.startaligned,eye_movement.eyepos.pred_vs_true.ver_mean.pval.startaligned] = arrayfun(@(i) corr(ver_mean1(i,:)',ver_mean_pred1(i,:)','Type','Spearman','rows','complete'), 1:Nt);
-[eye_movement.eyepos.pred_vs_true.hor_mean.rho.startaligned,eye_movement.eyepos.pred_vs_true.hor_mean.pval.startaligned] = arrayfun(@(i) corr(hor_mean1(i,:)',hor_mean_pred1(i,:)','Type','Spearman','rows','complete'), 1:Nt);
-[eye_movement.eyepos.pred_vs_true.ver_diff.rho.startaligned,eye_movement.eyepos.pred_vs_true.ver_diff.pval.startaligned] = arrayfun(@(i) corr(ver_diff1(i,:)',ver_diff_pred1(i,:)','Type','Spearman','rows','complete'), 1:Nt);
-[eye_movement.eyepos.pred_vs_true.hor_diff.rho.startaligned,eye_movement.eyepos.pred_vs_true.hor_diff.pval.startaligned] = arrayfun(@(i) corr(hor_diff1(i,:)',hor_diff_pred1(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+try
+    [eye_movement.eyepos.pred_vs_true.ver_mean.rho.startaligned,eye_movement.eyepos.pred_vs_true.ver_mean.pval.startaligned] = arrayfun(@(i) corr(ver_mean1(i,:)',ver_mean_pred1(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+catch
+    eye_movement.eyepos.pred_vs_true.ver_mean.rho.startaligned = arrayfun(@(i) corr(ver_mean1(i,:)',ver_mean_pred1(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+    eye_movement.eyepos.pred_vs_true.ver_mean.pval.startaligned = NaN(1, Nt);
+end
+try
+    [eye_movement.eyepos.pred_vs_true.hor_mean.rho.startaligned,eye_movement.eyepos.pred_vs_true.hor_mean.pval.startaligned] = arrayfun(@(i) corr(hor_mean1(i,:)',hor_mean_pred1(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+catch
+    eye_movement.eyepos.pred_vs_true.hor_mean.rho.startaligned = arrayfun(@(i) corr(hor_mean1(i,:)',hor_mean_pred1(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+    eye_movement.eyepos.pred_vs_true.hor_mean.pval.startaligned = NaN(1, Nt);
+end
+try
+    [eye_movement.eyepos.pred_vs_true.ver_diff.rho.startaligned,eye_movement.eyepos.pred_vs_true.ver_diff.pval.startaligned] = arrayfun(@(i) corr(ver_diff1(i,:)',ver_diff_pred1(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+catch
+    eye_movement.eyepos.pred_vs_true.ver_diff.rho.startaligned = arrayfun(@(i) corr(ver_diff1(i,:)',ver_diff_pred1(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+    eye_movement.eyepos.pred_vs_true.ver_diff.pval.startaligned = NaN(1, Nt);
+    
+end
+try
+    [eye_movement.eyepos.pred_vs_true.hor_diff.rho.startaligned,eye_movement.eyepos.pred_vs_true.hor_diff.pval.startaligned] = arrayfun(@(i) corr(hor_diff1(i,:)',hor_diff_pred1(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+catch
+    eye_movement.eyepos.pred_vs_true.hor_diff.rho.startaligned = arrayfun(@(i) corr(hor_diff1(i,:)',hor_diff_pred1(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+    eye_movement.eyepos.pred_vs_true.hor_diff.pval.startaligned = NaN(1, Nt);
+end
 
 % timecourse of component-wise regression between predicted & true eye position
 beta = cell2mat(arrayfun(@(i) regress(ver_mean1(i,:)',[ver_mean_pred1(i,:)' zeros(ntrls,1)]), 1:Nt, 'UniformOutput', false)); [eye_movement.eyepos.pred_vs_true.ver_mean.beta10.startaligned,eye_movement.eyepos.pred_vs_true.ver_mean.beta00.startaligned] = deal(beta(1,:),beta(2,:));
@@ -351,10 +372,31 @@ ver_diff2 = cell2mat(cellfun(@(x) [flipud(x(:)) ; nan(Nt - length(x),1)],ver_dif
 hor_diff2 = cell2mat(cellfun(@(x) [flipud(x(:)) ; nan(Nt - length(x),1)],hor_diff,'UniformOutput',false));
 
 % timecourse of component-wise corr between predicted & true eye position
-[eye_movement.eyepos.pred_vs_true.ver_mean.rho.stopaligned,eye_movement.eyepos.pred_vs_true.ver_mean.pval.stopaligned] = arrayfun(@(i) corr(ver_mean2(i,:)',ver_mean_pred2(i,:)','Type','Spearman','rows','complete'), 1:Nt);
-[eye_movement.eyepos.pred_vs_true.hor_mean.rho.stopaligned,eye_movement.eyepos.pred_vs_true.hor_mean.pval.stopaligned] = arrayfun(@(i) corr(hor_mean2(i,:)',hor_mean_pred2(i,:)','Type','Spearman','rows','complete'), 1:Nt);
-[eye_movement.eyepos.pred_vs_true.ver_diff.rho.stopaligned,eye_movement.eyepos.pred_vs_true.ver_diff.pval.stopaligned] = arrayfun(@(i) corr(ver_diff2(i,:)',ver_diff_pred2(i,:)','Type','Spearman','rows','complete'), 1:Nt);
-[eye_movement.eyepos.pred_vs_true.hor_diff.rho.stopaligned,eye_movement.eyepos.pred_vs_true.hor_diff.pval.stopaligned] = arrayfun(@(i) corr(hor_diff2(i,:)',hor_diff_pred2(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+try
+    [eye_movement.eyepos.pred_vs_true.ver_mean.rho.stopaligned,eye_movement.eyepos.pred_vs_true.ver_mean.pval.stopaligned] = arrayfun(@(i) corr(ver_mean2(i,:)',ver_mean_pred2(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+catch
+    eye_movement.eyepos.pred_vs_true.ver_mean.rho.stopaligned = arrayfun(@(i) corr(ver_mean2(i,:)',ver_mean_pred2(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+    eye_movement.eyepos.pred_vs_true.ver_mean.pval.stopaligned = NaN(1, Nt);
+end
+try
+    [eye_movement.eyepos.pred_vs_true.hor_mean.rho.stopaligned,eye_movement.eyepos.pred_vs_true.hor_mean.pval.stopaligned] = arrayfun(@(i) corr(hor_mean2(i,:)',hor_mean_pred2(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+catch
+    eye_movement.eyepos.pred_vs_true.hor_mean.rho.stopaligned = arrayfun(@(i) corr(hor_mean2(i,:)',hor_mean_pred2(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+    eye_movement.eyepos.pred_vs_true.hor_mean.pval.stopaligned = NaN(1, Nt);
+end
+try
+    [eye_movement.eyepos.pred_vs_true.ver_diff.rho.stopaligned,eye_movement.eyepos.pred_vs_true.ver_diff.pval.stopaligned] = arrayfun(@(i) corr(ver_diff2(i,:)',ver_diff_pred2(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+catch
+    eye_movement.eyepos.pred_vs_true.ver_diff.rho.stopaligned = arrayfun(@(i) corr(ver_diff2(i,:)',ver_diff_pred2(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+    eye_movement.eyepos.pred_vs_true.ver_diff.pval.stopaligned = NaN(1, Nt);
+    
+end
+try
+    [eye_movement.eyepos.pred_vs_true.hor_diff.rho.stopaligned,eye_movement.eyepos.pred_vs_true.hor_diff.pval.stopaligned] = arrayfun(@(i) corr(hor_diff2(i,:)',hor_diff_pred2(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+catch
+    eye_movement.eyepos.pred_vs_true.hor_diff.rho.stopaligned = arrayfun(@(i) corr(hor_diff2(i,:)',hor_diff_pred2(i,:)','Type','Spearman','rows','complete'), 1:Nt);
+    eye_movement.eyepos.pred_vs_true.hor_diff.pval.stopaligned = NaN(1, Nt);
+end
 
 % component-wise regression between predicted & true eye position
 beta = cell2mat(arrayfun(@(i) regress(ver_mean2(i,:)',[ver_mean_pred2(i,:)' zeros(ntrls,1)]), 1:Nt, 'UniformOutput', false)); [eye_movement.eyepos.pred_vs_true.ver_mean.beta10.stopaligned,eye_movement.eyepos.pred_vs_true.ver_mean.beta00.stopaligned] = deal(beta(1,:),beta(2,:));

@@ -337,7 +337,7 @@ if prs.regress_eye && ~prs.extractonly
                 trlindx = stats.trialtype.(trialtypes{i})(j).trlindx;
                 %% BLOCK EDO
                 if ~isfield(stats.trialtype.(trialtypes{i})(j),'spatialerr')
-                    % spatial map of response variance
+                 % spatial map of response variance
                     targ.r = r_fly(trlindx); targ.theta = theta_fly(trlindx); % for later use
                     resp.r = rf_monk(trlindx); resp.theta = thetaf_monk(trlindx);
                     stats.trialtype.(trialtypes{i})(j).spatialerr = ComputeSpatialError(targ,resp);
@@ -352,7 +352,10 @@ if prs.regress_eye && ~prs.extractonly
                     AnalyseEyefixation(xfp_rel(trlindx),yfp_rel(trlindx),zle(trlindx),yle(trlindx),zre(trlindx),yre(trlindx),t_sac(trlindx),t_stop(trlindx),ts(trlindx),prs);
                 stats.trialtype.(trialtypes{i})(j).eye_movement = ...
                     AnalyseEyemovement(stats.trialtype.(trialtypes{i})(j).eye_fixation,xfp_rel(trlindx),yfp_rel(trlindx),xmp(trlindx),ymp(trlindx),zle(trlindx),yle(trlindx),zre(trlindx),yre(trlindx),t_sac(trlindx),t_stop(trlindx),ts(trlindx),trlerrors(trlindx),spatialstd,prs);
+                try
                 stats.trialtype.(trialtypes{i})(j).eye_saccade = AnalyseSaccades(xfp_rel(trlindx),yfp_rel(trlindx),zle(trlindx),yle(trlindx),zre(trlindx),yre(trlindx),t_sac(trlindx),t_stop(trlindx),ts(trlindx),trlerrors(trlindx),prs);
+                catch
+                end
                 %do this for perturbation trials only
                 if strcmp(stats.trialtype.(trialtypes{i})(j).val,'with perturbation')
                     [stats.trialtype.(trialtypes{i})(j).ptbtriggered.ts,stats.trialtype.(trialtypes{i})(j).ptbtriggered.eye_movement] = ...

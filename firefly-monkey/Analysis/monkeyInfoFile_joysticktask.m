@@ -7248,6 +7248,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 
 %% session 2
@@ -7265,6 +7266,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 
 %% session 3
@@ -7279,7 +7281,10 @@ monkeyInfo (end).comments = {'fixed density, no landmarks, no ptb, random DCI, r
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 
 %% session 4
@@ -7297,7 +7302,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 5
 monkeyInfo (end+1).monk_id = 91;
@@ -7314,7 +7319,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 6
 monkeyInfo (end+1).monk_id = 91;
@@ -7331,7 +7336,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 7
 monkeyInfo (end+1).monk_id = 91;
@@ -7348,7 +7353,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 8
 monkeyInfo (end+1).monk_id = 91;
@@ -7365,7 +7370,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 9
 monkeyInfo (end+1).monk_id = 91;
@@ -7382,7 +7387,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 10
 monkeyInfo (end+1).monk_id = 91;
@@ -7399,7 +7404,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 11
 monkeyInfo (end+1).monk_id = 91;
@@ -7416,7 +7421,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 12
 monkeyInfo (end+1).monk_id = 91;
@@ -7433,7 +7438,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 13
 monkeyInfo (end+1).monk_id = 91;
@@ -7450,7 +7455,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 14
 monkeyInfo (end+1).monk_id = 91;
@@ -7467,7 +7472,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 15
 monkeyInfo (end+1).monk_id = 91;
@@ -7484,7 +7489,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 16
 monkeyInfo (end+1).monk_id = 91;
@@ -7501,7 +7506,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 17
 monkeyInfo (end+1).monk_id = 91;
@@ -7518,7 +7523,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 18
 monkeyInfo (end+1).monk_id = 91;
@@ -7535,7 +7540,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 19
 monkeyInfo (end+1).monk_id = 91;
@@ -7552,7 +7557,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 20
 monkeyInfo (end+1).monk_id = 91;
@@ -7569,7 +7574,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 21
 monkeyInfo (end+1).monk_id = 91;
@@ -7586,7 +7591,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 22
 monkeyInfo (end+1).monk_id = 91;
@@ -7603,7 +7608,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 23
 monkeyInfo (end+1).monk_id = 91;
@@ -7620,7 +7625,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 24
 monkeyInfo (end+1).monk_id = 91;
@@ -7637,7 +7642,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 25
 monkeyInfo (end+1).monk_id = 91;
@@ -7654,7 +7659,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 26
 monkeyInfo (end+1).monk_id = 91;
@@ -7671,4 +7676,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_flyDuration = 8;
+
+%% Session 27
 

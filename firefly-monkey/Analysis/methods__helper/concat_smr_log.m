@@ -1,4 +1,11 @@
 function concat_str = concat_smr_log(smr,log)
+   % check if there is a prs.xfp field and substitute in smr
+   if isfield(log(1).prs,'xfp')
+       for tr = 1:length(log)
+            smr(tr).continuous.xfp = log(tr).prs.xfp.*ones(length(smr(tr).continuous.xfp), 1);
+            smr(tr).continuous.yfp = log(tr).prs.yfp.*ones(length(smr(tr).continuous.yfp), 1);
+       end
+   end
    % get fields of smr
    fields_smr = fieldnames(smr);
    % empty struct creation

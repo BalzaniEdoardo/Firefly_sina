@@ -68,10 +68,12 @@ if flag_ffpars
     prs.FFparams_xpos = monkeyInfo.FFparams_xpos;
     prs.FFparams_ypos = monkeyInfo.FFparams_ypos;
     prs.FFparams_rewardDur = monkeyInfo.FFparams_rewardDur;
+    prs.FFparams_flyDuration = monkeyInfo.FFparams_flyDuration;
 else
     prs.FFparams_xpos = 7;
     prs.FFparams_ypos = 8;
     prs.FFparams_rewardDur = 9;
+    prs.FFparams_flyDuration = nan;
 end
 %% data acquisition parameters
 prs.fs_smr = 5000/6; % sampling rate of smr file
