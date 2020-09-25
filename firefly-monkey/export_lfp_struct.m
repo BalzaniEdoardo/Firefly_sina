@@ -23,7 +23,7 @@ save('monkey_info.mat','monkeyInfo')
 %% extract a file
 
 monk_id = 91;
-sess_list = 2:26;
+sess_list = [[1], [3:24], [26]];%2:26;
 
 not_done = [];
 except_struct = struct();
