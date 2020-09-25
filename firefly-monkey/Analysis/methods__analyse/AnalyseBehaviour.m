@@ -199,7 +199,7 @@ if prs.split_trials
 end
 
 %% linear regression, ROC analysis, error distribution, ptb-triggered average
-if prs.regress_behv && ~prs.extractonly
+if prs.regress_behv && ~prs.extractonly && prs.compute_linreg
     trialtypes = fields(stats.trialtype);
     if length(trialtypes) == 1
         array_i = 1;
@@ -282,7 +282,7 @@ if prs.regress_behv && ~prs.extractonly
                         runningmedian.betaLB_r = movmedian(((r_fly(trlindx)-rewardwin)./r_fly(trlindx)),movingwin_trials);
                         runningmedian.betaUB_r = movmedian(((r_fly(trlindx)+rewardwin)./r_fly(trlindx)),movingwin_trials);
                         % reward bounds for beta theta
-                        [Xout,Yout] = circcirc(x_fly(trlindx),y_fly(trlindx),repmat(rewardwin,1,sum(trlindx)),...
+                        [Xout,Yout] = circcirc_FAST(x_fly(trlindx),y_fly(trlindx),repmat(rewardwin,1,sum(trlindx)),...
                             zeros(1,sum(trlindx)),zeros(1,sum(trlindx)),r_fly(trlindx));
                         thetabounds = [];
                         thetabounds(:,1) = atan2d(Xout(:,1),Yout(:,1)); thetabounds(:,2) = atan2d(Xout(:,2),Yout(:,2));
@@ -335,6 +335,17 @@ if prs.regress_eye && ~prs.extractonly
                 stats.trialtype.(trialtypes{i})(j).eye_movement = stats.trialtype.all.eye_movement;
             else
                 trlindx = stats.trialtype.(trialtypes{i})(j).trlindx;
+                %% BLOCK EDO
+                if ~isfield(stats.trialtype.(trialtypes{i})(j),'spatialerr')
+                    % spatial map of response variance
+                    targ.r = r_fly(trlindx); targ.theta = theta_fly(trlindx); % for later use
+                    resp.r = rf_monk(trlindx); resp.theta = thetaf_monk(trlindx);
+                    stats.trialtype.(trialtypes{i})(j).spatialerr = ComputeSpatialError(targ,resp);
+                    % spatial map of response errors
+                    resp.r = resp.r/regress(resp.r(:),targ.r(:)); resp.theta = resp.theta/regress(resp.theta(:),targ.theta(:));
+                    stats.trialtype.(trialtypes{i})(j).spatialstd = ComputeSpatialError(targ,resp);
+                end
+                %% end block edo
                 spatialerr = stats.trialtype.(trialtypes{i})(j).spatialerr;
                 spatialstd = stats.trialtype.(trialtypes{i})(j).spatialstd;
                 stats.trialtype.(trialtypes{i})(j).eye_fixation = ...

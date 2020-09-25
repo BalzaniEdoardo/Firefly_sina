@@ -53,6 +53,7 @@ prs.comments = monkeyInfo.comments;
 prs.eyechannels = monkeyInfo.eyechannels;
 prs.extractonly = true; % Extract trials and exit
 prs.addconcat = false; % Add concatenated trial to extract
+prs.compute_linreg = false;
 
 % check if there are info about the FF params
 list_fields = fieldnames(monkeyInfo);
