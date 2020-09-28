@@ -2,7 +2,10 @@
 clear all
 clc
 addpath(genpath('/Users/edoardo/Work/Code/Firefly_sina/'));
-folder = '/Volumes/WD Edo/firefly_analysis/LFP_band/DATASET/PPC+PFC/';
+
+%folder = '/Volumes/WD Edo/firefly_analysis/LFP_band/DATASET/PPC+MST/';
+folder = '/Users/jean-paulnoel/Documents/Savin-Angelaki/For_behavior/Data/m44/';
+
 
 % get session done
 listing = dir(folder);
@@ -53,7 +56,14 @@ for ii = 1:length(listing)
     prs.regress_behv = true;
     prs.extractonly = false;
     prs.regress_eye = true;
-    cd('/Users/edoardo/Work/Code/Firefly_sina/firefly-monkey/Analysis/methods__analyse')
+    prs.compute_linreg = false;
+
+    %cd('/Users/edoardo/Work/Code/Firefly_sina/firefly-monkey/Analysis/methods__analyse')
+    cd('/Users/jean-paulnoel/Documents/Savin-Angelaki/Firefly_sina/firefly-monkey/Analysis/methods__analyse')
+    
+%       stats = align_eye_tracking_with_behavior(trials_behv,prs);
+%         behav_stats = stats;
+%         save(strcat(folder,new_name),'prs','trials_behv','units','behav_stats')
     try
         stats = align_eye_tracking_with_behavior(trials_behv,prs);
         behav_stats = stats;

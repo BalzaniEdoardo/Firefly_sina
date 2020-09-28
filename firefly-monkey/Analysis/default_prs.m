@@ -53,6 +53,7 @@ prs.comments = monkeyInfo.comments;
 prs.eyechannels = monkeyInfo.eyechannels;
 prs.extractonly = true; % Extract trials and exit
 prs.addconcat = false; % Add concatenated trial to extract
+prs.compute_linreg = false;
 
 % check if there are info about the FF params
 list_fields = fieldnames(monkeyInfo);
@@ -67,10 +68,12 @@ if flag_ffpars
     prs.FFparams_xpos = monkeyInfo.FFparams_xpos;
     prs.FFparams_ypos = monkeyInfo.FFparams_ypos;
     prs.FFparams_rewardDur = monkeyInfo.FFparams_rewardDur;
+    prs.FFparams_flyDuration = monkeyInfo.FFparams_flyDuration;
 else
     prs.FFparams_xpos = 7;
     prs.FFparams_ypos = 8;
     prs.FFparams_rewardDur = 9;
+    prs.FFparams_flyDuration = nan;
 end
 %% data acquisition parameters
 prs.fs_smr = 5000/6; % sampling rate of smr file

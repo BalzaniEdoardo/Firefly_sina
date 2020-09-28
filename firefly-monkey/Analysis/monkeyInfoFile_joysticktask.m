@@ -5196,1234 +5196,1234 @@ monkeyInfo (end).eyechannels = [2 2];
 
 %% Schro
 
-%% session 1
-% monkeyInfo (end+1).monk_id = 53;         % Monkey # 
-% monkeyInfo (end).session_id = 1;         % Session #
-% monkeyInfo (end).coord.row = 18;         % Row (grid)
-% monkeyInfo (end).coord.column = 18;      % Column (grid)
-% monkeyInfo (end).coord.depth = 2935;     % Depth below gray matter (in microns)
-% monkeyInfo (end).units = 0;              % Analyse all units? (sorted units=0; all units=1)
-% monkeyInfo (end).folder = 'Schro\U-probe\Oct 26 2017';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [1 0];
-% 
-% 
-% 
-% %% session 2
-% monkeyInfo (end+1).monk_id = 53; 
-% monkeyInfo (end).session_id = 2;
-% monkeyInfo (end).coord.row = 16;
-% monkeyInfo (end).coord.column = 23;
-% monkeyInfo (end).coord.depth = 4291;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Oct 31 2017';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [1 0];
-% 
-% 
-% 
-% %% session 3
-% monkeyInfo (end+1).monk_id = 53; 
-% monkeyInfo (end).session_id = 3;
-% monkeyInfo (end).coord.row = 14;
-% monkeyInfo (end).coord.column = 20;
-% monkeyInfo (end).coord.depth = 2876;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Nov 1 2017';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [0 0];
-% 
-% 
-% 
-% %% session 4
-% monkeyInfo (end+1).monk_id = 53; 
-% monkeyInfo (end).session_id = 4;
-% monkeyInfo (end).coord.row = 16;
-% monkeyInfo (end).coord.column = 20;
-% monkeyInfo (end).coord.depth = 3280;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Nov 2 2017';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [0 0];
-% 
-% 
-% 
-% %% session 5
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 5;
-% monkeyInfo (end).coord.row = 19;
-% monkeyInfo (end).coord.column = 19;
-% monkeyInfo (end).coord.depth = 2411;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Nov 7 2017';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [0 0];
-% 
-% 
-% 
-% %% session 6
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 6;
-% monkeyInfo (end).coord.row = 14;
-% monkeyInfo (end).coord.column = 22;
-% monkeyInfo (end).coord.depth = 3925;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Nov 8 2017';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [0 0];
-% 
-% 
-% 
-% %% session 7
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 7;
-% monkeyInfo (end).coord.row = 15;
-% monkeyInfo (end).coord.column = 20;
-% monkeyInfo (end).coord.depth = 2925;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Nov 29 2017';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 8
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 8;
-% monkeyInfo (end).coord.row = 17;
-% monkeyInfo (end).coord.column = 20;
-% monkeyInfo (end).coord.depth = 3558;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Nov 30 2017';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 9
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 9;
-% monkeyInfo (end).coord.row = 14;
-% monkeyInfo (end).coord.column = 24;
-% monkeyInfo (end).coord.depth = 3540;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Dec 1 2017';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 10
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 10;
-% monkeyInfo (end).coord.row = 18;
-% monkeyInfo (end).coord.column = 19;
-% monkeyInfo (end).coord.depth = 3239;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Dec 4 2017';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 11
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 11;
-% monkeyInfo (end).coord.row = 15;
-% monkeyInfo (end).coord.column = 21;
-% monkeyInfo (end).coord.depth = 1896;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Dec 5 2017';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 12
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 12;
-% monkeyInfo (end).coord.row = 16;
-% monkeyInfo (end).coord.column = 26;
-% monkeyInfo (end).coord.depth = 2895;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Dec 7 2017';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 13
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 13;
-% monkeyInfo (end).coord.row = 18;
-% monkeyInfo (end).coord.column = 25;
-% monkeyInfo (end).coord.depth = 2673;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Dec 11 2017';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 14
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 14;
-% monkeyInfo (end).coord.row = 14;
-% monkeyInfo (end).coord.column = 21;
-% monkeyInfo (end).coord.depth = 2797;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Dec 12 2017';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 15
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 15;
-% monkeyInfo (end).coord.row = 15;
-% monkeyInfo (end).coord.column = 27;
-% monkeyInfo (end).coord.depth = 2738;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Dec 13 2017';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 16
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 16;
-% monkeyInfo (end).coord.row = 19;
-% monkeyInfo (end).coord.column = 18;
-% monkeyInfo (end).coord.depth = 2848;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Dec 14 2017';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 17
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 17;
-% monkeyInfo (end).coord.row = 15;
-% monkeyInfo (end).coord.column = 22;
-% monkeyInfo (end).coord.depth = 2822;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Dec 15 2017';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 18
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 18;
-% monkeyInfo (end).coord.row = 14;
-% monkeyInfo (end).coord.column = 23;
-% monkeyInfo (end).coord.depth = 2977;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Dec 18 2017';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 19
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 19;
-% monkeyInfo (end).coord.row = 15;
-% monkeyInfo (end).coord.column = 26;
-% monkeyInfo (end).coord.depth = 2817;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Dec 19 2017';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 20
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 20;
-% monkeyInfo (end).coord.row = 16;
-% monkeyInfo (end).coord.column = 25;
-% monkeyInfo (end).coord.depth = 4182;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Dec 26 2017';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 21
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 21;
-% monkeyInfo (end).coord.row = 18;
-% monkeyInfo (end).coord.column = 23;
-% monkeyInfo (end).coord.depth = 3173;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Dec 27 2017';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 22
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 22;
-% monkeyInfo (end).coord.row = 15;
-% monkeyInfo (end).coord.column = 23;
-% monkeyInfo (end).coord.depth = 2757;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Dec 28 2017';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 23
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 23;
-% monkeyInfo (end).coord.row = 17;
-% monkeyInfo (end).coord.column = 21;
-% monkeyInfo (end).coord.depth = 1812;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Dec 29 2017';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 24
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 24;
-% monkeyInfo (end).coord.row = 15;
-% monkeyInfo (end).coord.column = 25;
-% monkeyInfo (end).coord.depth = 1774;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Jan 2 2018';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 25
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 25;
-% monkeyInfo (end).coord.row = 17;
-% monkeyInfo (end).coord.column = 24;
-% monkeyInfo (end).coord.depth = 2400;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Jan 5 2018';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 26
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 26;
-% monkeyInfo (end).coord.row = 16;
-% monkeyInfo (end).coord.column = 21;
-% monkeyInfo (end).coord.depth = 2605;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Jan 8 2018';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 27
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 27;
-% monkeyInfo (end).coord.row = 19;
-% monkeyInfo (end).coord.column = 20;
-% monkeyInfo (end).coord.depth = 3171;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Jan 9 2018';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 28
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 28;
-% monkeyInfo (end).coord.row = 17;
-% monkeyInfo (end).coord.column = 23;
-% monkeyInfo (end).coord.depth = 3981;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\U-probe\Jan 10 2018';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'linearprobe24'};
-% monkeyInfo (end).area = {'PPC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 29
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 29;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Jan 22 2018';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 30
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 30;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Feb 5 2018';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 31
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 31;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Feb 6 2018';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 32
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 32;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Feb 07 2018';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 33
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 33;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Feb 08 2018';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 34
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 34;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Feb 09 2018';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 35
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 35;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Feb 12 2018';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 36
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 36;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Feb 13 2018';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 37
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 37;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Feb 14 2018';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 38
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 38;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Feb 15 2018';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {'PPC', 'PFC'};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 39
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 39;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Feb 16 2018';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 40
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 40;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Feb 19 2018';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 41
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 41;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Feb 20 2018';
-% monkeyInfo (end).comments = {'gain manipulation, fixed density, no landmarks, no perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 42
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 42;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Feb 21 2018';
-% monkeyInfo (end).comments = {'gain manipulation, fixed density, no landmarks, no perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 43
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 43;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Feb 26 2018';
-% monkeyInfo (end).comments = {'gain manipulation, fixed density, no landmarks, no perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 44
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 44;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Feb 27 2018';
-% monkeyInfo (end).comments = {'gain manipulation, fixed density, no landmarks, no perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 45
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 45;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Feb 28 2018';
-% monkeyInfo (end).comments = {'two densities, stimulus replay, no landmarks, no perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 46
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 46;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 1 2018';
-% monkeyInfo (end).comments = {'two densities, stimulus replay, no landmarks, no perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
+% session 1
+monkeyInfo (end+1).monk_id = 53;         % Monkey # 
+monkeyInfo (end).session_id = 1;         % Session #
+monkeyInfo (end).coord.row = 18;         % Row (grid)
+monkeyInfo (end).coord.column = 18;      % Column (grid)
+monkeyInfo (end).coord.depth = 2935;     % Depth below gray matter (in microns)
+monkeyInfo (end).units = 0;              % Analyse all units? (sorted units=0; all units=1)
+monkeyInfo (end).folder = 'Schro\U-probe\Oct 26 2017';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [1 0];
+
+
+
+%% session 2
+monkeyInfo (end+1).monk_id = 53; 
+monkeyInfo (end).session_id = 2;
+monkeyInfo (end).coord.row = 16;
+monkeyInfo (end).coord.column = 23;
+monkeyInfo (end).coord.depth = 4291;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Oct 31 2017';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [1 0];
+
+
+
+%% session 3
+monkeyInfo (end+1).monk_id = 53; 
+monkeyInfo (end).session_id = 3;
+monkeyInfo (end).coord.row = 14;
+monkeyInfo (end).coord.column = 20;
+monkeyInfo (end).coord.depth = 2876;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Nov 1 2017';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [0 0];
+
+
+
+%% session 4
+monkeyInfo (end+1).monk_id = 53; 
+monkeyInfo (end).session_id = 4;
+monkeyInfo (end).coord.row = 16;
+monkeyInfo (end).coord.column = 20;
+monkeyInfo (end).coord.depth = 3280;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Nov 2 2017';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [0 0];
+
+
+
+%% session 5
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 5;
+monkeyInfo (end).coord.row = 19;
+monkeyInfo (end).coord.column = 19;
+monkeyInfo (end).coord.depth = 2411;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Nov 7 2017';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [0 0];
+
+
+
+%% session 6
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 6;
+monkeyInfo (end).coord.row = 14;
+monkeyInfo (end).coord.column = 22;
+monkeyInfo (end).coord.depth = 3925;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Nov 8 2017';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [0 0];
+
+
+
+%% session 7
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 7;
+monkeyInfo (end).coord.row = 15;
+monkeyInfo (end).coord.column = 20;
+monkeyInfo (end).coord.depth = 2925;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Nov 29 2017';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 8
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 8;
+monkeyInfo (end).coord.row = 17;
+monkeyInfo (end).coord.column = 20;
+monkeyInfo (end).coord.depth = 3558;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Nov 30 2017';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 9
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 9;
+monkeyInfo (end).coord.row = 14;
+monkeyInfo (end).coord.column = 24;
+monkeyInfo (end).coord.depth = 3540;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Dec 1 2017';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 10
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 10;
+monkeyInfo (end).coord.row = 18;
+monkeyInfo (end).coord.column = 19;
+monkeyInfo (end).coord.depth = 3239;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Dec 4 2017';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 11
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 11;
+monkeyInfo (end).coord.row = 15;
+monkeyInfo (end).coord.column = 21;
+monkeyInfo (end).coord.depth = 1896;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Dec 5 2017';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 12
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 12;
+monkeyInfo (end).coord.row = 16;
+monkeyInfo (end).coord.column = 26;
+monkeyInfo (end).coord.depth = 2895;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Dec 7 2017';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 13
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 13;
+monkeyInfo (end).coord.row = 18;
+monkeyInfo (end).coord.column = 25;
+monkeyInfo (end).coord.depth = 2673;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Dec 11 2017';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 14
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 14;
+monkeyInfo (end).coord.row = 14;
+monkeyInfo (end).coord.column = 21;
+monkeyInfo (end).coord.depth = 2797;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Dec 12 2017';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 15
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 15;
+monkeyInfo (end).coord.row = 15;
+monkeyInfo (end).coord.column = 27;
+monkeyInfo (end).coord.depth = 2738;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Dec 13 2017';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 16
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 16;
+monkeyInfo (end).coord.row = 19;
+monkeyInfo (end).coord.column = 18;
+monkeyInfo (end).coord.depth = 2848;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Dec 14 2017';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 17
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 17;
+monkeyInfo (end).coord.row = 15;
+monkeyInfo (end).coord.column = 22;
+monkeyInfo (end).coord.depth = 2822;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Dec 15 2017';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 18
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 18;
+monkeyInfo (end).coord.row = 14;
+monkeyInfo (end).coord.column = 23;
+monkeyInfo (end).coord.depth = 2977;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Dec 18 2017';
+monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 19
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 19;
+monkeyInfo (end).coord.row = 15;
+monkeyInfo (end).coord.column = 26;
+monkeyInfo (end).coord.depth = 2817;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Dec 19 2017';
+monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 20
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 20;
+monkeyInfo (end).coord.row = 16;
+monkeyInfo (end).coord.column = 25;
+monkeyInfo (end).coord.depth = 4182;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Dec 26 2017';
+monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 21
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 21;
+monkeyInfo (end).coord.row = 18;
+monkeyInfo (end).coord.column = 23;
+monkeyInfo (end).coord.depth = 3173;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Dec 27 2017';
+monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 22
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 22;
+monkeyInfo (end).coord.row = 15;
+monkeyInfo (end).coord.column = 23;
+monkeyInfo (end).coord.depth = 2757;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Dec 28 2017';
+monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 23
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 23;
+monkeyInfo (end).coord.row = 17;
+monkeyInfo (end).coord.column = 21;
+monkeyInfo (end).coord.depth = 1812;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Dec 29 2017';
+monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 24
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 24;
+monkeyInfo (end).coord.row = 15;
+monkeyInfo (end).coord.column = 25;
+monkeyInfo (end).coord.depth = 1774;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Jan 2 2018';
+monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 25
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 25;
+monkeyInfo (end).coord.row = 17;
+monkeyInfo (end).coord.column = 24;
+monkeyInfo (end).coord.depth = 2400;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Jan 5 2018';
+monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 26
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 26;
+monkeyInfo (end).coord.row = 16;
+monkeyInfo (end).coord.column = 21;
+monkeyInfo (end).coord.depth = 2605;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Jan 8 2018';
+monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 27
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 27;
+monkeyInfo (end).coord.row = 19;
+monkeyInfo (end).coord.column = 20;
+monkeyInfo (end).coord.depth = 3171;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Jan 9 2018';
+monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 28
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 28;
+monkeyInfo (end).coord.row = 17;
+monkeyInfo (end).coord.column = 23;
+monkeyInfo (end).coord.depth = 3981;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\U-probe\Jan 10 2018';
+monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 29
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 29;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Jan 22 2018';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 30
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 30;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Feb 5 2018';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 31
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 31;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Feb 6 2018';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 32
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 32;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Feb 07 2018';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 33
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 33;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Feb 08 2018';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 34
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 34;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Feb 09 2018';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 35
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 35;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Feb 12 2018';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 36
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 36;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Feb 13 2018';
+monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 37
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 37;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Feb 14 2018';
+monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 38
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 38;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Feb 15 2018';
+monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {'PPC', 'PFC'};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 39
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 39;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Feb 16 2018';
+monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 40
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 40;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Feb 19 2018';
+monkeyInfo (end).comments = {'fixed density, no landmarks, perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 41
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 41;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Feb 20 2018';
+monkeyInfo (end).comments = {'gain manipulation, fixed density, no landmarks, no perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 42
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 42;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Feb 21 2018';
+monkeyInfo (end).comments = {'gain manipulation, fixed density, no landmarks, no perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 43
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 43;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Feb 26 2018';
+monkeyInfo (end).comments = {'gain manipulation, fixed density, no landmarks, no perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 44
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 44;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Feb 27 2018';
+monkeyInfo (end).comments = {'gain manipulation, fixed density, no landmarks, no perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 45
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 45;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Feb 28 2018';
+monkeyInfo (end).comments = {'two densities, stimulus replay, no landmarks, no perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 46
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 46;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 1 2018';
+monkeyInfo (end).comments = {'two densities, stimulus replay, no landmarks, no perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
 % %% session 47
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 47;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 2 2018';
-% monkeyInfo (end).comments = {'two densities, stimulus replay, no landmarks, no perturbations, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 48
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 48;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 5 2018';
-% monkeyInfo (end).comments = {'perturbations, fixed density, no landmarks, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 49
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 49;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 6 2018';
-% monkeyInfo (end).comments = {'perturbations, fixed density, no landmarks, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 50
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 50;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 7 2018';
-% monkeyInfo (end).comments = {'perturbations, fixed density, no landmarks, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 51
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 51;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 8 2018';
-% monkeyInfo (end).comments = {'perturbations, fixed density, no landmarks, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 52
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 52;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 9 2018';
-% monkeyInfo (end).comments = {'fixed ground, no ptb, fixed density, no landmarks, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 53
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 53;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 12 2018';
-% monkeyInfo (end).comments = {'fixed ground, no ptb, fixed density, no landmarks, random DCI, random ITI'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 54
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 54;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 13 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 55
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 55;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 14 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 56
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 56;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 15 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 57
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 57;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 16 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 58
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 58;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 21 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 59
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 59;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 22 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 60
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 60;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 23 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 61
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 61;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 26 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 62
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 62;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 27 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 63
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 63;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 28 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 64
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 64;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 29 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 65 %Question: Duplicate session
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 65;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Mar 30 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 66 %Question: Duplicate session
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 66;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Apr 02 2018'; %Question: Same date as last session
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 67
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 67;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Apr 03 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 68
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 68;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Apr 04 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 69
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 69;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Apr 05 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 70
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 70;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Apr 06 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 71
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 71;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Apr 09 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 72
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 72;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Apr 10 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 73
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 73;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Apr 11 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 74
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 74;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Apr 12 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 75
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 75;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Apr 13 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 76
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 76;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Apr 16 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 77
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 77;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Apr 17 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 78
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 78;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Apr 18 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 79
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 79;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Apr 19 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% 
-% %% session 80
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 80;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Apr 20 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 81
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 81;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Apr 23 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
-% 
-% 
-% 
-% %% session 82
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 82;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Utah Array\Apr 24 2018';
-% monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 47;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 2 2018';
+monkeyInfo (end).comments = {'two densities, stimulus replay, no landmarks, no perturbations, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 48
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 48;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 5 2018';
+monkeyInfo (end).comments = {'perturbations, fixed density, no landmarks, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 49
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 49;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 6 2018';
+monkeyInfo (end).comments = {'perturbations, fixed density, no landmarks, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 50
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 50;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 7 2018';
+monkeyInfo (end).comments = {'perturbations, fixed density, no landmarks, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 51
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 51;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 8 2018';
+monkeyInfo (end).comments = {'perturbations, fixed density, no landmarks, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 52
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 52;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 9 2018';
+monkeyInfo (end).comments = {'fixed ground, no ptb, fixed density, no landmarks, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 53
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 53;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 12 2018';
+monkeyInfo (end).comments = {'fixed ground, no ptb, fixed density, no landmarks, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 54
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 54;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 13 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 55
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 55;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 14 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 56
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 56;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 15 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 57
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 57;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 16 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 58
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 58;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 21 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 59
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 59;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 22 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 60
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 60;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 23 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 61
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 61;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 26 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 62
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 62;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 27 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 63
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 63;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 28 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 64
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 64;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 29 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 65 %Question: Duplicate session
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 65;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Mar 30 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 66 %Question: Duplicate session
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 66;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Apr 02 2018'; %Question: Same date as last session
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 67
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 67;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Apr 03 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 68
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 68;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Apr 04 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 69
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 69;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Apr 05 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 70
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 70;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Apr 06 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 71
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 71;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Apr 09 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 72
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 72;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Apr 10 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 73
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 73;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Apr 11 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 74
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 74;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Apr 12 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 75
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 75;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Apr 13 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 76
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 76;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Apr 16 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 77
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 77;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Apr 17 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 78
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 78;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Apr 18 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 79
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 79;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Apr 19 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+
+%% session 80
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 80;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Apr 20 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 81
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 81;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Apr 23 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
+
+
+
+%% session 82
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 82;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Apr 24 2018';
+monkeyInfo (end).comments = {'no ptb, fixed density, no landmarks, random DCI, random ITI, multifirelfly'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
 
 
 
@@ -6692,62 +6692,62 @@ monkeyInfo (end).eyechannels = [2 2];
 
 
 %% session 101
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 101;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Sim_recordings\Jul 26 2018';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI, 1D Azimuth, MSTd'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 101;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Sim_recordings\Jul 26 2018';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI, 1D Azimuth, MSTd'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
 
 
 
 %% session 102
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 102;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Sim_recordings\Jul 27 2018';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI, 1D Azimuth, MSTd'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 102;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Sim_recordings\Jul 27 2018';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI, 1D Azimuth, MSTd'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
 
 
 
 %% session 103
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 103;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Sim_recordings\Jul 28 2018';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI, 1D Azimuth, MSTd'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 103;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Sim_recordings\Jul 28 2018';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI, 1D Azimuth, MSTd'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
 
 
 
 %% session 104
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 104;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Sim_recordings\Jul 31 2018';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI, 1D Azimuth, MSTd'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 104;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Sim_recordings\Jul 31 2018';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI, 1D Azimuth, MSTd'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
 
 
 
@@ -6931,48 +6931,48 @@ monkeyInfo (end).eyechannels = [2 2];
 
 
 
-%% session 117
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 117;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Sim_recordings\Sep 06 2018';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, no ptb, random DCI, fixed ITI, multifirefly, 1D Azimuth, MSTd'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
+% session 117
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 117;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Sim_recordings\Sep 06 2018';
+monkeyInfo (end).comments = {'fixed density, no landmarks, no ptb, random DCI, fixed ITI, multifirefly, 1D Azimuth, MSTd'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
 
 
 
-%% session 118
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 118;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Sim_recordings\Sep 07 2018';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, no ptb, random DCI, fixed ITI, multifirefly, 1D Azimuth, MSTd'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
+% session 118
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 118;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Sim_recordings\Sep 07 2018';
+monkeyInfo (end).comments = {'fixed density, no landmarks, no ptb, random DCI, fixed ITI, multifirefly, 1D Azimuth, MSTd'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
 
 
 
-%% session 119
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 119;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Sim_recordings\Sep 10 2018';
-% monkeyInfo (end).comments = {'fixed density, no landmarks, no ptb, random DCI, fixed ITI, multifirefly, 1D Azimuth, MSTd'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
+% session 119
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 119;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Sim_recordings\Sep 10 2018';
+monkeyInfo (end).comments = {'fixed density, no landmarks, no ptb, random DCI, fixed ITI, multifirefly, 1D Azimuth, MSTd'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
 
 
 
@@ -6991,18 +6991,18 @@ monkeyInfo (end).eyechannels = [2 2];
 
 
 
-%% session 121
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 121;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Sim_recordings\Sep 12 2018';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI, 1D Azimuth, MSTd'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
+% session 121
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 121;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Sim_recordings\Sep 12 2018';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI, 1D Azimuth, MSTd'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
 
 
 
@@ -7170,18 +7170,18 @@ monkeyInfo (end).eyechannels = [2 2];
 
 
 
- %% session 133
-% monkeyInfo (end+1).monk_id = 53;
-% monkeyInfo (end).session_id = 133;
-% monkeyInfo (end).coord.row = nan;
-% monkeyInfo (end).coord.column = nan;
-% monkeyInfo (end).coord.depth = nan;
-% monkeyInfo (end).units = 0;
-% monkeyInfo (end).folder = 'Schro\Sim_recordings\Sep 28 2018';
-% monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI, 1D Azimuth, MSTd'};
-% monkeyInfo (end).electrode_type = {'utah2x48'};
-% monkeyInfo (end).area = {{'PPC', 'PFC'}};
-% monkeyInfo (end).eyechannels = [2 2];
+ % session 133
+monkeyInfo (end+1).monk_id = 53;
+monkeyInfo (end).session_id = 133;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Sim_recordings\Sep 28 2018';
+monkeyInfo (end).comments = {'two densities, no landmarks, no ptb, random DCI, random ITI, 1D Azimuth, MSTd'};
+monkeyInfo (end).electrode_type = {'utah2x48'};
+monkeyInfo (end).area = {{'PPC', 'PFC'}};
+monkeyInfo (end).eyechannels = [2 2];
 
 
 
@@ -7248,6 +7248,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 
 %% session 2
@@ -7265,6 +7266,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 
 %% session 3
@@ -7279,7 +7281,10 @@ monkeyInfo (end).comments = {'fixed density, no landmarks, no ptb, random DCI, r
 monkeyInfo (end).electrode_type = {'utah2x48'};
 monkeyInfo (end).area = {{'PPC', 'PFC'}};
 monkeyInfo (end).eyechannels = [2 2];
-
+monkeyInfo (end).FFparams_xpos = 4;
+monkeyInfo (end).FFparams_ypos = 5;
+monkeyInfo (end).FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 
 %% session 4
@@ -7297,7 +7302,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 5
 monkeyInfo (end+1).monk_id = 91;
@@ -7314,7 +7319,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 6
 monkeyInfo (end+1).monk_id = 91;
@@ -7331,7 +7336,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 7
 monkeyInfo (end+1).monk_id = 91;
@@ -7348,7 +7353,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 8
 monkeyInfo (end+1).monk_id = 91;
@@ -7365,7 +7370,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 9
 monkeyInfo (end+1).monk_id = 91;
@@ -7382,7 +7387,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 10
 monkeyInfo (end+1).monk_id = 91;
@@ -7399,7 +7404,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 11
 monkeyInfo (end+1).monk_id = 91;
@@ -7416,7 +7421,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 12
 monkeyInfo (end+1).monk_id = 91;
@@ -7433,7 +7438,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 13
 monkeyInfo (end+1).monk_id = 91;
@@ -7450,7 +7455,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 14
 monkeyInfo (end+1).monk_id = 91;
@@ -7467,7 +7472,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 15
 monkeyInfo (end+1).monk_id = 91;
@@ -7484,7 +7489,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 16
 monkeyInfo (end+1).monk_id = 91;
@@ -7501,7 +7506,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 17
 monkeyInfo (end+1).monk_id = 91;
@@ -7518,7 +7523,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 18
 monkeyInfo (end+1).monk_id = 91;
@@ -7535,7 +7540,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 19
 monkeyInfo (end+1).monk_id = 91;
@@ -7552,7 +7557,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 20
 monkeyInfo (end+1).monk_id = 91;
@@ -7569,7 +7574,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 21
 monkeyInfo (end+1).monk_id = 91;
@@ -7586,7 +7591,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 22
 monkeyInfo (end+1).monk_id = 91;
@@ -7603,7 +7608,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 23
 monkeyInfo (end+1).monk_id = 91;
@@ -7620,7 +7625,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 24
 monkeyInfo (end+1).monk_id = 91;
@@ -7637,7 +7642,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 25
 monkeyInfo (end+1).monk_id = 91;
@@ -7654,7 +7659,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
-
+monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% session 26
 monkeyInfo (end+1).monk_id = 91;
@@ -7671,4 +7676,7 @@ monkeyInfo (end).eyechannels = [2 2];
 monkeyInfo (end).FFparams_xpos = 4;
 monkeyInfo (end).FFparams_ypos = 5;
 monkeyInfo (end).FFparams_rewardDur = 7;
+monkeyInfo (end).FFparams_flyDuration = 8;
+
+%% Session 27
 

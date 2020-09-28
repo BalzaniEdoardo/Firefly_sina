@@ -114,11 +114,17 @@ while newline ~= -1
     newline = fgetl(fid);
     if all(newline ~= -1) && strcmp(newline(1:7),'Firefly') &&  (str2double(newline(9))==0 || str2double(newline(9))==1)
         FFparams = split(newline,' ');
-        trials(count).prs.xfp = str2double(FFparams{prs.FFparams_xpos}); 
-        trials(count).prs.yfp = str2double(FFparams{prs.FFparams_ypos});
+        trials(count).prs.xfp = -str2double(FFparams{prs.FFparams_xpos}); 
+        trials(count).prs.yfp = -str2double(FFparams{prs.FFparams_ypos});
         trials(count).prs.reward_duration = str2double(FFparams{prs.FFparams_rewardDur});
-        
-        
+        trials(count).prs.fly_duration = str2double(FFparams{prs.FFparams_flyDuration});
+        if ~isnan(trials(count).prs.fly_duration)
+            if trials(count).prs.fly_duration > 0.4
+                trials(count).logical.firefly_fullON = 1;
+            else
+                trials(count).logical.firefly_fullON = 0;
+            end
+        end
         % status not avilable in new log file (assuming always OFF)
         if isnan(trials(count).logical.firefly_fullON)
             trials(count).logical.firefly_fullON = false;
