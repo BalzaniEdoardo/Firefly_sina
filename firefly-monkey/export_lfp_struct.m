@@ -25,7 +25,7 @@ save('monkey_info.mat','monkeyInfo')
 
 %% extract a file
 
-monk_id = 91;
+monk_id = 51;
 sess_list = [41, 42, 43, 44,45, 46, 47, 123, 124, 125, 15, 16, 17,18,19,20, 21, 22,23 ,24,25,26,27,28,29,30,31,326];%2:26;
 
 
