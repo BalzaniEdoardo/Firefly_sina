@@ -26,7 +26,7 @@ save('monkey_info.mat','monkeyInfo')
 %% extract a file
 
 monk_id = 91;
-sess_list = [1,2,3,6,7,8,9,10,11,14,17,18,19,24,25,26];%2:26;
+sess_list = [41, 42, 43, 44,45, 46, 47, 123, 124, 125, 15, 16, 17,18,19,20, 21, 22,23 ,24,25,26,27,28,29,30,31,326];%2:26;
 
 
 not_done = [];
@@ -41,7 +41,7 @@ for session_id = sess_list
             except_struct.(str_id) = ME;
             not_done = [not_done,session_id];
             save([this_path,separ,'not_done.mat'],'not_done','except_struct')
-        end
+            ends
         disp('...clearing exp after session extraction')
         clear experiments
 end
