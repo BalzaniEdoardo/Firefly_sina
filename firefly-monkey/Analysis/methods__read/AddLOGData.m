@@ -47,6 +47,7 @@ while newline ~= -1
     end
     if newline == -1, break; end
     count = count+1;
+    
     trials(count).prs.floordensity = str2double(newline(27:34));
     %% initialise
     trials(count).logical.landmark_distance = false;
@@ -102,16 +103,29 @@ while newline ~= -1
     if newline == -1, break; end
     if ~strcmp(newline(1:9),'Trial Num')        
         if isempty(fixed_ground)
-            while ~strcmp(newline(1:9),'Enable Li')
+            while ~strcmp(newline(1:9),'Enable Li') && ~contains(newline,'Trial Num')
                 newline = fgetl(fid);
+                if newline == -1, break; end
             end
-            trials(count).logical.landmark_fixedground = logical(1 - str2double(newline(18)));
+            if newline ~= -1
+                if ~contains(newline,'Trial Num')
+                    trials(count).logical.landmark_fixedground = logical(1 - str2double(newline(18)));
+                else
+                    trials(count).logical.landmark_fixedground = false;
+                end
+            else
+                trials(count).logical.landmark_fixedground = false;
+            end
         end
+        
     else
         trials(count).logical.landmark_fixedground = false;
     end
+    if newline == -1, break; end
     %% firefly position if available
-    newline = fgetl(fid);
+    if ~contains(newline,'Trial Num')
+        newline = fgetl(fid);
+    end
     if all(newline ~= -1) && strcmp(newline(1:7),'Firefly') &&  (str2double(newline(9))==0 || str2double(newline(9))==1)
         FFparams = split(newline,' ');
         trials(count).prs.xfp = -str2double(FFparams{prs.FFparams_xpos}); 

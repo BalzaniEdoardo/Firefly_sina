@@ -1,6 +1,6 @@
 %% Script for extracting the data pre-GAM fit
 % 
-%cd '/Users/jean-paulnoel/Documents/Savin-Angelaki/Firefly_sina'
+cd 'C:\Users\eb162\Firefly_sina\firefly-monkey'
 
 % Save the for the repo
 if contains(computer,'MAC')
@@ -26,22 +26,24 @@ save('monkey_info.mat','monkeyInfo')
 %% extract a file
 
 monk_id = 51;
-sess_list = [41, 42, 43, 44,45, 46, 47, 123, 124, 125, 15, 16, 17,18,19,20, 21, 22,23 ,24,25,26,27,28,29,30,31,326];%2:26;
+sess_list = [38,40,41, 42, 43, 44,45, 46, 47, 123, 124, 125, 15,...
+   16, 17,18,19,20, 21, 22,23 ,24,25,26,27,28,29,30,31,326];%2:26;
 
 
 not_done = [];
 except_struct = struct();
 for session_id = sess_list
         experiments = experiment('firefly-monkey');
-        prs = default_prs(monk_id,session_id);
+        
         try
+            prs = default_prs(monk_id,session_id);
             experiments.AddSessions(monk_id,session_id,{'behv','units','lfps'});
         catch ME
             str_id = sprintf('m%ds%d',monk_id,session_id);
             except_struct.(str_id) = ME;
             not_done = [not_done,session_id];
             save([this_path,separ,'not_done.mat'],'not_done','except_struct')
-            ends
+        end
         disp('...clearing exp after session extraction')
         clear experiments
 end
