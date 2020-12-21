@@ -285,6 +285,8 @@ prs.unitlookup('r_targ') = 'cm';
 prs.unitlookup('theta_targ') = 'deg';
 prs.unitlookup('phase') = 'rad';
 prs.unitlookup('spikehist') = 's';
+prs.unitlookup('r_accel') = 'cm/s^2';
+prs.unitlookup('theta_accel') = 'deg/s^2';
 
 %% plotting parameters
 prs.binwidth_abs = prs.temporal_binwidth; % use same width as for the analysis
@@ -300,7 +302,7 @@ prs.bootstrap_trl = 50; % number of trials to bootstrap
 %% traditional methods
 prs.hand_features = {'Finger1','Finger2','Finger3','Finger4','Wrist-down','Wrist-up','Hand-down','Hand-up'};
 prs.tuning_events = {'move','target','stop','reward'}; % discrete events - choose from elements of event_vars (above)
-prs.tuning_continuous = {'v','w','r_targ','theta_targ','d','phi','eye_ver','eye_hor','phase'}; % continuous variables - choose from elements of continuous_vars (above)
+prs.tuning_continuous = {'v','w','r_targ','theta_targ','d','phi','eye_ver','eye_hor','phase','h1','h2','r_accel','theta_accel'}; % continuous variables - choose from elements of continuous_vars (above)
 prs.tuning_method = 'binning'; % choose from (increasing computational complexity): 'binning', 'k-nearest', 'nadaraya-watson', 'local-linear'
 %% GAM fitting
 prs.GAM_varname = {'v','w','d','phi','r_targ','theta_targ','phase','move','target_OFF','stop','reward','spikehist'}; % list of variable names to include in the generalised additive model

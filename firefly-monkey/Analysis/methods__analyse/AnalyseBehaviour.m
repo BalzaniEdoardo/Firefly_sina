@@ -52,6 +52,11 @@ for i=1:ntrls
     [r_belief,theta_belief] = eyepos2flypos(continuous(i).zle,continuous(i).zre,continuous(i).yle,continuous(i).yre,prs.height);
     continuous(i).r_belief = r_belief;
     continuous(i).theta_belief = theta_belief;
+    %% add the aceleration if needed
+    if any(strcmp(prs.tuning_continuous,'r_accel'))
+        [continuous(i).r_accel ,continuous(i).theta_accel] = acceleration_estimate(i,continuous,prs);
+    end
+
 end
 
 %% trial-by-trial error
@@ -88,6 +93,8 @@ stats.pos_rel.x_stop = {continuous.xsp_rel};
 stats.pos_rel.y_stop = {continuous.ysp_rel};
 stats.pos_rel.r_stop = {continuous.r_stop_rel};
 stats.pos_rel.theta_stop = {continuous.theta_stop_rel};
+stats.accel.radial = {continuous.r_accel};
+stats.accel.angular = {continuous.theta_accel};
 
 %% trial type
 goodtrls = ~((yf_monk<0) | (abs(v_monk)>1) | ([events.t_stop]>4)); % remove trials in which monkey did not move at all or kept moving until the end
@@ -274,26 +281,25 @@ if prs.regress_behv && ~prs.extractonly && prs.compute_linreg
                     % do this for control gain manipulation only
                     movingwin_trials = prs.movingwin_trials;
                     rewardwin = prs.rewardwin;
-%                     if numel(contains({stats.trialtype.(trialtypes{i}).val},'gain'))>1
-%                         % actual betas
-%                         runningmedian.beta_r = movmedian((rf_monk(trlindx)./r_fly(trlindx)),movingwin_trials);
-%                         runningmedian.beta_theta = movmedian((thetaf_monk(trlindx)./theta_fly(trlindx)),movingwin_trials);
-%                         % reward bounds for beta r
-%                         runningmedian.betaLB_r = movmedian(((r_fly(trlindx)-rewardwin)./r_fly(trlindx)),movingwin_trials);
-%                         runningmedian.betaUB_r = movmedian(((r_fly(trlindx)+rewardwin)./r_fly(trlindx)),movingwin_trials);
-%                         % reward bounds for beta theta
-%                         [Xout,Yout] = circcirc_FAST(x_fly(trlindx),y_fly(trlindx),repmat(rewardwin,1,sum(trlindx)),...
-%                             zeros(1,sum(trlindx)),zeros(1,sum(trlindx)),r_fly(trlindx));
-%                         thetabounds = [];
-%                         %thetabounds(:,1) = atan2d(Xout(:,1),Yout(:,1)); thetabounds(:,2) = atan2d(Xout(:,2),Yout(:,2));
-%                         thetabounds(:,1) = atan2d(Xout(1,:),Yout(1,:))'; thetabounds(:,2) = atan2d(Xout(2,:),Yout(2,:))';
-%                         isNeg_theta_fly = theta_fly(trlindx)<0;
-%                         for k=1:sum(trlindx), if isNeg_theta_fly(k), thetabounds(k,:) = -fliplr(thetabounds(k,:)); end; end
-%                         runningmedian.betaLB_theta = movmedian(thetabounds(:,2)./abs(theta_fly(trlindx)'),50);
-%                         runningmedian.betaUB_theta = 2-runningmedian.betaLB_theta; % symmetric bounds
-%                         %runningmedian.betaUB_theta = movmedian(thetabounds(:,1)./abs(theta_fly(trlindx)'),50);
-%                         stats.trialtype.(trialtypes{i})(j).runningmedian = runningmedian;
-%                     end
+                    if numel(contains({stats.trialtype.(trialtypes{i}).val},'gain'))>1
+                        % actual betas
+                        runningmedian.beta_r = movmedian((rf_monk(trlindx)./r_fly(trlindx)),movingwin_trials);
+                        runningmedian.beta_theta = movmedian((thetaf_monk(trlindx)./theta_fly(trlindx)),movingwin_trials);
+                        % reward bounds for beta r
+                        runningmedian.betaLB_r = movmedian(((r_fly(trlindx)-rewardwin)./r_fly(trlindx)),movingwin_trials);
+                        runningmedian.betaUB_r = movmedian(((r_fly(trlindx)+rewardwin)./r_fly(trlindx)),movingwin_trials);
+                        % reward bounds for beta theta
+                        [Xout,Yout] = circcirc_FAST(x_fly(trlindx),y_fly(trlindx),repmat(rewardwin,1,sum(trlindx)),...
+                            zeros(1,sum(trlindx)),zeros(1,sum(trlindx)),r_fly(trlindx));
+                        thetabounds = [];
+                        thetabounds(:,1) = atan2d(Xout(:,1),Yout(:,1)); thetabounds(:,2) = atan2d(Xout(:,2),Yout(:,2));
+                        isNeg_theta_fly = theta_fly(trlindx)<0;
+                        for k=1:sum(trlindx), if isNeg_theta_fly(k), thetabounds(k,:) = -fliplr(thetabounds(k,:)); end; end
+                        runningmedian.betaLB_theta = movmedian(thetabounds(:,2)./abs(theta_fly(trlindx)'),50);
+                        runningmedian.betaUB_theta = 2-runningmedian.betaLB_theta; % symmetric bounds
+                        %runningmedian.betaUB_theta = movmedian(thetabounds(:,1)./abs(theta_fly(trlindx)'),50);
+                        stats.trialtype.(trialtypes{i})(j).runningmedian = runningmedian;
+                    end
                     % do this if there was gain mainpulation
                     if any(strcmp(stats.trialtype.(trialtypes{i})(j).val,{'all','rewarded'})) && ...
                         numel(contains({stats.trialtype.(trialtypes{end}).val},'gain'))>1

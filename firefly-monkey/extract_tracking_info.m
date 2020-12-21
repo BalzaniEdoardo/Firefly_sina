@@ -2,6 +2,7 @@
 clear all
 clc
 addpath(genpath('/Users/edoardo/Work/Code/Firefly_sina/'));
+
 %folder = '/Volumes/WD Edo/firefly_analysis/LFP_band/DATASET/PPC+MST/';
 folder = '/Users/jean-paulnoel/Documents/Savin-Angelaki/For_behavior/Data/m44/';
 
@@ -56,6 +57,7 @@ for ii = 1:length(listing)
     prs.extractonly = false;
     prs.regress_eye = true;
     prs.compute_linreg = false;
+
     %cd('/Users/edoardo/Work/Code/Firefly_sina/firefly-monkey/Analysis/methods__analyse')
     cd('/Users/jean-paulnoel/Documents/Savin-Angelaki/Firefly_sina/firefly-monkey/Analysis/methods__analyse')
     

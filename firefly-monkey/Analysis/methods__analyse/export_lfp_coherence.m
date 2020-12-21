@@ -1,13 +1,7 @@
 %% Script for extracting the data pre-GAM fit
 % 
-<<<<<<< HEAD
-clc; 
-cd 'C:\Users\lab\Documents\Savin-Angelaki\Firefly_sina'
-=======
 %cd 'C:\Users\eb162\Firefly_sina\firefly-monkey'
-cd '/Users/edoardo/Work/Code/Firefly_sina/neuroGAM'
->>>>>>> bc519e6e7a17a0fc89e080316e60bd60f48e58a1
-
+cd '/Users/edoardo/Work/Code/Firefly_sina/firefly-monkey'
 % Save the for the repo
 if contains(computer,'MAC')
     separ = '/';
@@ -31,9 +25,9 @@ save('monkey_info.mat','monkeyInfo')
 
 %% extract a file
 
-
-monk_id = 53;
-sess_list = [90];%2:26;
+monk_id = 51;
+sess_list = [38,40,41, 42, 43, 44,45, 46, 47, 123, 124, 125, 15,...
+   16, 17,18,19,20, 21, 22,23 ,24,25,26,27,28,29,30,31,326];%2:26;
 
 
 not_done = [];
@@ -43,7 +37,11 @@ for session_id = sess_list
         
         try
             prs = default_prs(monk_id,session_id);
-            experiments.AddSessions(monk_id,session_id,{'behv','units','lfps'});
+            prs.compute_coherencyLFP = 1;
+            prs.analyse_alpha = 0;
+            prs.analyse_beta = 0;
+            prs.analyse_theta = 0;
+            experiments.AddSessions(monk_id,session_id,{'behv','units','lfps'},prs);
         catch ME
             str_id = sprintf('m%ds%d',monk_id,session_id);
             except_struct.(str_id) = ME;
