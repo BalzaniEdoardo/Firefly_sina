@@ -52,6 +52,11 @@ for i=1:ntrls
     [r_belief,theta_belief] = eyepos2flypos(continuous(i).zle,continuous(i).zre,continuous(i).yle,continuous(i).yre,prs.height);
     continuous(i).r_belief = r_belief;
     continuous(i).theta_belief = theta_belief;
+    %% add the aceleration if needed
+    if any(strcmp(prs.tuning_continuous,'r_accel'))
+        [continuous(i).r_accel ,continuous(i).theta_accel] = acceleration_estimate(i,continuous,prs);
+    end
+
 end
 
 %% trial-by-trial error
@@ -88,6 +93,8 @@ stats.pos_rel.x_stop = {continuous.xsp_rel};
 stats.pos_rel.y_stop = {continuous.ysp_rel};
 stats.pos_rel.r_stop = {continuous.r_stop_rel};
 stats.pos_rel.theta_stop = {continuous.theta_stop_rel};
+stats.accel.radial = {continuous.r_accel};
+stats.accel.angular = {continuous.theta_accel};
 
 %% trial type
 goodtrls = ~((yf_monk<0) | (abs(v_monk)>1) | ([events.t_stop]>4)); % remove trials in which monkey did not move at all or kept moving until the end
