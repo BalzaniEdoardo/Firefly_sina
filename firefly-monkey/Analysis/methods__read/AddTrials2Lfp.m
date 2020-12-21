@@ -2,7 +2,7 @@ function [trials, stationary, mobile, eyesfixed, eyesfree] = AddTrials2Lfp(lfp,f
 
 ntrls = length(trialevents.t_end);
 trials(ntrls) = struct(); stationary(ntrls) = struct(); mobile(ntrls) = struct(); eyesfixed(ntrls) = struct(); eyesfree(ntrls) = struct();
-dt = 1/fs; 
+dt = 1/fs; % this dt is from the lfp data
 nt = length(lfp);
 ts = dt*(1:nt);
 

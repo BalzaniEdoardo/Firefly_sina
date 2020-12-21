@@ -83,9 +83,19 @@ while newline ~= -1
     if strcmp(newline(1:9),'Inter-tri')
         trials(count).prs.intertrial_interval = str2double(newline(27:end)); % time between end of this trial and beg of next trial (s)
         newline = fgetl(fid);
-    elseif exist('intertrial_interval','var')
+    elseif exist('Inter-trial Interval','var')
         trials(count).prs.intertrial_interval = intertrial_interval;
-    end    
+    else
+        is_ITI = 0; 
+        while ~is_ITI
+            newline = fgetl(fid);
+            if strcmp(newline(1:9),'Inter-tri')
+                trials(count).prs.intertrial_interval = str2double(newline(27:end));   
+                is_ITI = 1; 
+                newline = fgetl(fid);
+            end
+        end
+    end
     if strcmp(newline(1:10),'Firefly Fu')
         trials(count).logical.firefly_fullON = str2double(newline(18)); % 1=firefly was ON throughout the trial
         newline = fgetl(fid);
@@ -114,9 +124,15 @@ while newline ~= -1
     newline = fgetl(fid);
     if all(newline ~= -1) && strcmp(newline(1:7),'Firefly') &&  (str2double(newline(9))==0 || str2double(newline(9))==1)
         FFparams = split(newline,' ');
-        trials(count).prs.xfp = -str2double(FFparams{prs.FFparams_xpos}); 
-        trials(count).prs.yfp = str2double(FFparams{prs.FFparams_ypos});
+        trials(count).prs.xfp = str2double(FFparams{prs.FFparams_xpos});
+        %trials(count).prs.xfp = -str2double(FFparams{prs.FFparams_xpos});
+        %for Ody you need to invert the X sign
+        trials(count).prs.yfp = - str2double(FFparams{prs.FFparams_ypos});
+        %trials(count).prs.yfp = str2double(FFparams{prs.FFparams_ypos});
+        try
         trials(count).prs.reward_duration = str2double(FFparams{prs.FFparams_rewardDur});
+        catch
+        end
         trials(count).prs.fly_duration = str2double(FFparams{prs.FFparams_flyDuration});
         if ~isnan(trials(count).prs.fly_duration)
             if trials(count).prs.fly_duration > 0.4
@@ -130,6 +146,22 @@ while newline ~= -1
             trials(count).logical.firefly_fullON = false;
         end
     end
+    
+    try
+    newline = fgetl(fid); 
+    if strcmp(newline(1:6), 'Reward')
+       trials(count).prs.reward_duration = str2double(newline(23:end));
+    elseif strcmp(newline(1:6), 'Caught')
+        newline = fgetl(fid); 
+        if strcmp(newline(1:6), 'Reward')
+            trials(count).prs.reward_duration = str2double(newline(23:end));
+        end
+    else
+        continue
+    end
+    catch
+    end
+    
     if newline ~= -1
         while ~(contains(newline,'Joy Stick Gain:') || contains(newline,'Trial Num')  || all(newline == -1))
             newline = fgetl(fid);

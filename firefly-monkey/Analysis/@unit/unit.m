@@ -26,6 +26,10 @@ classdef unit < handle
             this.isiV = unit.isiV;
             this.electrode_id = unit.electrode_id;
             this.electrode_type = unit.electrode_type;
+            try
+            this.brain_area = unit.brain_area;
+            catch
+            end
             this.spkwf = unit.spkwf; %mean spike-waveform;     
             this.spkwidth = Compute_SpikeWidth(unit.spkwf,Fs);
             this.type = unittype;

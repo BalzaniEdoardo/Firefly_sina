@@ -7680,3 +7680,137 @@ monkeyInfo (end).FFparams_flyDuration = 8;
 
 %% Session 27
 
+
+
+%% NYU ANIMALS START HERE %%
+
+%% session 512; Fake data to check if things are working
+monkeyInfo (end+1).monk_id = 71;
+monkeyInfo (end).session_id = 512;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Schro\Utah Array\Aug 10 2020';
+monkeyInfo (end).comments = {'fixed densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe24'};
+monkeyInfo (end).area = {'MST'};
+monkeyInfo (end).eyechannels = [2 2];
+monkeyInfo (end).FFparams_xpos = 7;
+monkeyInfo (end).FFparams_ypos = 8;
+monkeyInfo (end).FFparams_flyDuration = 4;
+monkeyInfo (end).isRipple = 1; 
+
+%% Session 849 - this is a fake recording with 32 electrodes
+
+monkeyInfo (end+1).monk_id = 71;
+monkeyInfo (end).session_id = 849;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Viktor\Fake Data\Oct 23 2020';
+monkeyInfo (end).comments = {'fixed densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe32'};
+monkeyInfo (end).area = {'MST'};
+monkeyInfo (end).eyechannels = [2 2];
+monkeyInfo (end).FFparams_xpos = 7;
+monkeyInfo (end).FFparams_ypos = 8;
+monkeyInfo (end).FFparams_flyDuration = 4;
+monkeyInfo (end).isRipple = 1; 
+
+%% Session 850 - this is a fake recording with 32 electrodes
+
+monkeyInfo (end+1).monk_id = 71;
+monkeyInfo (end).session_id = 850;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Viktor\Fake Data\Oct 24 2020';
+monkeyInfo (end).comments = {'fixed densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe32'};
+monkeyInfo (end).area = {'MST'};
+monkeyInfo (end).eyechannels = [2 2];
+monkeyInfo (end).FFparams_xpos = 7;
+monkeyInfo (end).FFparams_ypos = 8;
+monkeyInfo (end).FFparams_flyDuration = 4;
+monkeyInfo (end).isRipple = 1; 
+
+%% Session 853 - this is a fake recording with 32 electrodes
+
+monkeyInfo (end+1).monk_id = 71;
+monkeyInfo (end).session_id = 853;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Viktor\Fake Data\Oct 31 2020';
+monkeyInfo (end).comments = {'fixed densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe32'};
+monkeyInfo (end).area = {'MST'};
+monkeyInfo (end).eyechannels = [2 2];
+monkeyInfo (end).FFparams_xpos = 7;
+monkeyInfo (end).FFparams_ypos = 8;
+monkeyInfo (end).FFparams_flyDuration = 4;
+monkeyInfo (end).isRipple = 1; 
+
+%% Session 854 - this is a fake recording with 32 linear electrodes + 128 utah array
+
+monkeyInfo (end+1).monk_id = 71;
+monkeyInfo (end).session_id = 854;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Viktor\Fake Data\Nov 03 2020';
+monkeyInfo (end).comments = {'fixed densities, no landmarks, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe32', 'utah128'};
+monkeyInfo (end).area = {'MST', 'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+monkeyInfo (end).FFparams_xpos = 7;
+monkeyInfo (end).FFparams_ypos = 8;
+monkeyInfo (end).FFparams_flyDuration = 4;
+monkeyInfo (end).isRipple = 1; 
+
+%% Start of real data NYU
+
+%% Session 1 - 
+
+monkeyInfo (end+1).monk_id = 71;
+monkeyInfo (end).session_id = 1;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Viktor\U-probe\Nov 13 2020\';
+monkeyInfo (end).comments = {'two densities, no landmarks, replay, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe32'};
+monkeyInfo (end).area = {'MST'};
+monkeyInfo (end).eyechannels = [2 2];
+monkeyInfo (end).FFparams_xpos = 7;
+monkeyInfo (end).FFparams_ypos = 8;
+monkeyInfo (end).FFparams_flyDuration = 4;
+monkeyInfo (end).isRipple = 1; 
+monkeyInfo (end).MT_border = 10; 
+
+%% Session 2
+
+monkeyInfo (end+1).monk_id = 71;
+monkeyInfo (end).session_id = 2;
+monkeyInfo (end).coord.row = nan;
+monkeyInfo (end).coord.column = nan;
+monkeyInfo (end).coord.depth = nan;
+monkeyInfo (end).units = 0;
+monkeyInfo (end).folder = 'Viktor\U-probe\Dec 01 2020\';
+monkeyInfo (end).comments = {'two densities, no landmarks, replay, no ptb, random DCI, random ITI'};
+monkeyInfo (end).electrode_type = {'linearprobe32'};
+monkeyInfo (end).area = {'PPC'};
+monkeyInfo (end).eyechannels = [2 2];
+monkeyInfo (end).FFparams_xpos = 7;
+monkeyInfo (end).FFparams_ypos = 8;
+monkeyInfo (end).FFparams_flyDuration = 4;
+monkeyInfo (end).isRipple = 1; 
+monkeyInfo (end).MT_border = 10; 
+
+

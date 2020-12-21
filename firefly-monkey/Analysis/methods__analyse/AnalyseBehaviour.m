@@ -274,25 +274,26 @@ if prs.regress_behv && ~prs.extractonly && prs.compute_linreg
                     % do this for control gain manipulation only
                     movingwin_trials = prs.movingwin_trials;
                     rewardwin = prs.rewardwin;
-                    if numel(contains({stats.trialtype.(trialtypes{i}).val},'gain'))>1
-                        % actual betas
-                        runningmedian.beta_r = movmedian((rf_monk(trlindx)./r_fly(trlindx)),movingwin_trials);
-                        runningmedian.beta_theta = movmedian((thetaf_monk(trlindx)./theta_fly(trlindx)),movingwin_trials);
-                        % reward bounds for beta r
-                        runningmedian.betaLB_r = movmedian(((r_fly(trlindx)-rewardwin)./r_fly(trlindx)),movingwin_trials);
-                        runningmedian.betaUB_r = movmedian(((r_fly(trlindx)+rewardwin)./r_fly(trlindx)),movingwin_trials);
-                        % reward bounds for beta theta
-                        [Xout,Yout] = circcirc_FAST(x_fly(trlindx),y_fly(trlindx),repmat(rewardwin,1,sum(trlindx)),...
-                            zeros(1,sum(trlindx)),zeros(1,sum(trlindx)),r_fly(trlindx));
-                        thetabounds = [];
-                        thetabounds(:,1) = atan2d(Xout(:,1),Yout(:,1)); thetabounds(:,2) = atan2d(Xout(:,2),Yout(:,2));
-                        isNeg_theta_fly = theta_fly(trlindx)<0;
-                        for k=1:sum(trlindx), if isNeg_theta_fly(k), thetabounds(k,:) = -fliplr(thetabounds(k,:)); end; end
-                        runningmedian.betaLB_theta = movmedian(thetabounds(:,2)./abs(theta_fly(trlindx)'),50);
-                        runningmedian.betaUB_theta = 2-runningmedian.betaLB_theta; % symmetric bounds
-                        %runningmedian.betaUB_theta = movmedian(thetabounds(:,1)./abs(theta_fly(trlindx)'),50);
-                        stats.trialtype.(trialtypes{i})(j).runningmedian = runningmedian;
-                    end
+%                     if numel(contains({stats.trialtype.(trialtypes{i}).val},'gain'))>1
+%                         % actual betas
+%                         runningmedian.beta_r = movmedian((rf_monk(trlindx)./r_fly(trlindx)),movingwin_trials);
+%                         runningmedian.beta_theta = movmedian((thetaf_monk(trlindx)./theta_fly(trlindx)),movingwin_trials);
+%                         % reward bounds for beta r
+%                         runningmedian.betaLB_r = movmedian(((r_fly(trlindx)-rewardwin)./r_fly(trlindx)),movingwin_trials);
+%                         runningmedian.betaUB_r = movmedian(((r_fly(trlindx)+rewardwin)./r_fly(trlindx)),movingwin_trials);
+%                         % reward bounds for beta theta
+%                         [Xout,Yout] = circcirc_FAST(x_fly(trlindx),y_fly(trlindx),repmat(rewardwin,1,sum(trlindx)),...
+%                             zeros(1,sum(trlindx)),zeros(1,sum(trlindx)),r_fly(trlindx));
+%                         thetabounds = [];
+%                         %thetabounds(:,1) = atan2d(Xout(:,1),Yout(:,1)); thetabounds(:,2) = atan2d(Xout(:,2),Yout(:,2));
+%                         thetabounds(:,1) = atan2d(Xout(1,:),Yout(1,:))'; thetabounds(:,2) = atan2d(Xout(2,:),Yout(2,:))';
+%                         isNeg_theta_fly = theta_fly(trlindx)<0;
+%                         for k=1:sum(trlindx), if isNeg_theta_fly(k), thetabounds(k,:) = -fliplr(thetabounds(k,:)); end; end
+%                         runningmedian.betaLB_theta = movmedian(thetabounds(:,2)./abs(theta_fly(trlindx)'),50);
+%                         runningmedian.betaUB_theta = 2-runningmedian.betaLB_theta; % symmetric bounds
+%                         %runningmedian.betaUB_theta = movmedian(thetabounds(:,1)./abs(theta_fly(trlindx)'),50);
+%                         stats.trialtype.(trialtypes{i})(j).runningmedian = runningmedian;
+%                     end
                     % do this if there was gain mainpulation
                     if any(strcmp(stats.trialtype.(trialtypes{i})(j).val,{'all','rewarded'})) && ...
                         numel(contains({stats.trialtype.(trialtypes{end}).val},'gain'))>1

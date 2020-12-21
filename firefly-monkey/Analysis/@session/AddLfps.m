@@ -1,13 +1,54 @@
 %% add lfps
-function AddLfps(this,prs)    
-    cd(fullfile(prs.filepath_neur,'Sorted'));
-    % determine type of electrode
-    linearprobe_type = []; utaharray_type = [];
-    for k=1:length(prs.electrode_type)
-        linearprobe_type = [linearprobe_type find(cellfun(@(electrode_type) strcmp(prs.electrode_type{k},electrode_type), prs.linearprobe.types),1)]; 
-        utaharray_type = [utaharray_type find(cellfun(@(electrode_type) strcmp(prs.electrode_type{k},electrode_type), prs.utaharray.types),1)];
-    end
-    
+function AddLfps(this,prs)
+cd(fullfile(prs.filepath_neur,'Sorted'));
+% determine type of electrode
+linearprobe_type = []; utaharray_type = [];
+for k=1:length(prs.electrode_type)
+    linearprobe_type = [linearprobe_type find(cellfun(@(electrode_type) strcmp(prs.electrode_type{k},electrode_type), prs.linearprobe.types),1)];
+    utaharray_type = [utaharray_type find(cellfun(@(electrode_type) strcmp(prs.electrode_type{k},electrode_type), prs.utaharray.types),1)];
+end
+
+if isfield(prs, 'isRipple') 
+    if prs.isRipple
+        
+        cd(fullfile(prs.filepath_neur,'Sorted'));
+        file_nev=dir('*.nev'); file_ns1=dir('*.ns2'); prs.neur_filetype = 'nev'; % need to check the sampling here..
+        fprintf(['... reading events from ' file_nev.name '\n']);
+        [events_nev,prs] = GetEvents_nev(file_nev.name,prs); % requires package from Blackrock Microsystems: https://github.com/BlackrockMicrosystems/NPMK
+        t_end_nev = [events_nev.t_end];
+        t_beg_nev = [events_nev.t_beg];
+        if length(t_beg_nev) > length(t_end_nev)
+            if all(t_end_nev - t_beg_nev(1:length(t_end_nev)) > 0)
+                events_nev.t_beg = t_beg_nev(1:length(t_end_nev));
+            elseif all(t_end_nev - t_beg_nev(length(t_beg_nev)-length(t_end_nev)+1:end) > 0)
+                events_nev.t_beg = t_beg_nev(length(t_beg_nev)-length(t_end_nev)+1:end);
+            end
+        end
+        
+        if length(this.behaviours.trials)~=length(events_nev.t_end)
+            events_nev = FixEvents_nev(events_nev,this.behaviours.trials);
+        end
+        if length(this.behaviours.trials)==length(events_nev.t_end)
+            % all seems to be good, load LFP data
+            NS1 = openNSx(file_ns1.name,'read', 'uV');
+            
+            [~ ,electrode_id, brain_area, channels_per_area, electrode_type] = MapChannel2Electrode_Ripple(NS1.MetaTags, prs);
+            
+            for j=1:sum(channels_per_area)
+                channel_id = NS1.MetaTags.ChannelID(j);
+                fprintf(['Segmenting LFP :: channel ' num2str(channel_id) '\n']);
+                this.lfps(end+1) = lfp(channel_id,electrode_id(j),electrode_type{j});
+                this.lfps(end).brain_area = brain_area{j};
+                this.lfps(end).AddTrials(NS1.Data(j,:),NS1.MetaTags.SamplingFreq,events_nev,this.behaviours,prs);
+            end
+        else
+            fprintf('Cannot segment LFP: Trial counts in smr and nev files do not match \n');
+            fprintf(['Trial end events: NEV file - ' num2str(length(events_nev.t_end)) ...
+                ' , SMR file - ' num2str(length(this.behaviours.trials)) '\n']);
+            fprintf('Debug and try again! \n');
+        end
+        
+    else
     if ~isempty(linearprobe_type) % assume linearprobe is recorded using Plexon
         try
             cd(fullfile(prs.filepath_neur,'PLEXON FILES','Sorted'));
@@ -18,7 +59,7 @@ function AddLfps(this,prs)
         file_ead=dir('*_ead.plx'); file_lfp=dir('*_lfp.plx'); prs.neur_filetype = 'plx';
         % read events
         fprintf(['... reading events from ' file_ead.name '\n']);
-%         [events_plx, prs.fs_spk] = GetEvents_plx(file_ead.name);
+        %         [events_plx, prs.fs_spk] = GetEvents_plx(file_ead.name);
         [events_plx] = GetEvents_plx(file_ead.name);
         % read lfp
         if length(this.behaviours.trials)==length(events_plx.t_end)
@@ -30,7 +71,7 @@ function AddLfps(this,prs)
                 if n == fn
                     if adfreq > prs.fs_lfp
                         % 4,10 = (adfreq/prs.fs_lfp); this for downsampling of 20000 to 500
-                        ad = decimate(ad,10); ad = decimate(ad,4); 
+                        ad = decimate(ad,10); ad = decimate(ad,4);
                     end
                     channel_id = j;
                     fprintf(['Segmenting LFP :: channel ' num2str(channel_id) '\n']);
@@ -50,8 +91,8 @@ function AddLfps(this,prs)
     else
         fprintf('No Plexon neural data files in the specified path \n');
     end
-        
-  
+    
+    
     if ~isempty(utaharray_type) % assume utaharray is recorded using Cereplex
         cd(fullfile(prs.filepath_neur,'Sorted'));
         file_nev=dir('*.nev'); file_ns1=dir('*.ns1'); prs.neur_filetype = 'nev';
@@ -61,7 +102,7 @@ function AddLfps(this,prs)
         t_beg_nev = [events_nev.t_beg];
         if length(t_beg_nev) > length(t_end_nev)
             if all(t_end_nev - t_beg_nev(1:length(t_end_nev)) > 0)
-               events_nev.t_beg = t_beg_nev(1:length(t_end_nev));
+                events_nev.t_beg = t_beg_nev(1:length(t_end_nev));
             elseif all(t_end_nev - t_beg_nev(length(t_beg_nev)-length(t_end_nev)+1:end) > 0)
                 events_nev.t_beg = t_beg_nev(length(t_beg_nev)-length(t_end_nev)+1:end);
             end
@@ -93,4 +134,5 @@ function AddLfps(this,prs)
         fprintf('No Cereplex neural data files in the specified path \n');
     end
     
+    end
 end

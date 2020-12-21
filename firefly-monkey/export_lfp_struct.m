@@ -1,6 +1,7 @@
 %% Script for extracting the data pre-GAM fit
 % 
-%cd '/Users/jean-paulnoel/Documents/Savin-Angelaki/Firefly_sina'
+clc; 
+cd 'C:\Users\lab\Documents\Savin-Angelaki\Firefly_sina'
 
 % Save the for the repo
 if contains(computer,'MAC')
@@ -25,8 +26,11 @@ monkeyInfoFile_joysticktask;
 
 %% extract a file
 
-monk_id = 91;
-sess_list = 6;
+monk_id = 71;
+sess_list = 1;
+
+%monk_id = 53;
+%sess_list = 108;
 
 not_done = [];
 except_struct = struct();
