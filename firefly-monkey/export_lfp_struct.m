@@ -1,12 +1,8 @@
 %% Script for extracting the data pre-GAM fit
 % 
-<<<<<<< HEAD
 clc; 
-cd 'C:\Users\lab\Documents\Savin-Angelaki\Firefly_sina'
-=======
-%cd 'C:\Users\eb162\Firefly_sina\firefly-monkey'
-cd '/Users/edoardo/Work/Code/Firefly_sina/neuroGAM'
->>>>>>> bc519e6e7a17a0fc89e080316e60bd60f48e58a1
+cd 'D:\Savin-Angelaki\Firefly_sina\firefly-monkey'
+
 
 % Save the for the repo
 if contains(computer,'MAC')
@@ -34,11 +30,14 @@ save('monkey_info.mat','monkeyInfo')
 
 monk_id = 53;
 sess_list = [90];%2:26;
-
+load('fit_list.mat')
 
 not_done = [];
 except_struct = struct();
-for session_id = sess_list
+for kk = 1:length(session)
+    
+        session_id = session(kk);
+        monk_id = monkey(kk);
         experiments = experiment('firefly-monkey');
         
         try
