@@ -42,7 +42,7 @@ for kk = 1:length(session)
         
         try
             prs = default_prs(monk_id,session_id);
-            experiments.AddSessions(monk_id,session_id,{'behv','units','lfps'});
+            experiments.AddSessions(monk_id,session_id,{'behv','units'});
         catch ME
             str_id = sprintf('m%ds%d',monk_id,session_id);
             except_struct.(str_id) = ME;
