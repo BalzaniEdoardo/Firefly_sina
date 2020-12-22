@@ -1,13 +1,13 @@
 %% list all file in a folder
-listing = dir('/Volumes/WD Edo/firefly_analysis/DATASET/PPC+PFC+MST/');
+%listing = dir('/Volumes/WD Edo/firefly_analysis/DATASET/PPC+PFC+MST/');
+listing = dir('D:\Savin-Angelaki\saved\');
 expression = '^m[0-9]+s[0-9]+.mat$';
-save_lfd = '/Volumes/WD Edo/firefly_analysis/LFP_band/results/LFP_coherence';
 for i = 1:length(listing)
-    close all
     % check that file names matches with the regexp
     if isempty(regexp(listing(i).name,expression))
         continue
     end
+
     splt = split(listing(i).name,'s');
     monkey_id = str2num(splt{1}(2:end));
     
@@ -23,6 +23,7 @@ for i = 1:length(listing)
 	prs.compute_coherencyLFP = 1;
 	prs.corr_neuronbehverr = 0;
     stats_lfp = AnalysePopulation(lfps,trials_behv,behv_stats,lfps,prs);
+
     pop_lfps.stats = stats_lfp;
     lead_electrode = plotCoherence(lfps,pop_lfps,prs,monkey_id,session_id,save_lfd);
     %save

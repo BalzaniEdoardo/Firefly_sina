@@ -1,5 +1,6 @@
 function concat_str = concat_smr_log(smr,log)
-   % check if there is a prs.xfp field and substitute in smr
+   % check if there is a prs.xfp field and substitute in smr (smr will
+   % either be noise or be full of zeros if xfp exists in the log)
    if isfield(log(1).prs,'xfp')
        for tr = 1:length(log)
             smr(tr).continuous.xfp = log(tr).prs.xfp.*ones(length(smr(tr).continuous.xfp), 1);

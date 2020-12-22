@@ -23,8 +23,8 @@ switch ftype
         
     case '.ns6'
         
-%         NS6 = openNSx([fpath,'\',fname,ftype],'noread');
-%         chn = NS6.MetaTags.ChannelCount;
+%       NS6 = openNSx([fpath,'\',fname,ftype],'noread');
+%       chn = NS6.MetaTags.ChannelCount;
         NS6 = openNSx([fpath,'\',fname,ftype]);
         pause (1);
         fidN = fopen([fname,'.dat'], 'a');
@@ -42,3 +42,4 @@ if ~strcmp(pwd,fpath)
 end
 
 disp('Binary file created');
+s

@@ -91,15 +91,7 @@ if compute_spectrum
                 trlindx = behv_stats.trialtype.(trialtypes{i})(j).trlindx;
                 trials_lfps_temp = trials_lfps(trlindx);
                 %%
-%                 cell_arr = {trials_lfps_temp.lfp};
-%                 cell_arr_tmp = {};
-%                 for ii =1:length(cell_arr)
-%                     cell_arr_tmp{ii} = double(cell_arr{ii});
-%                 end
-%                 clear cell_arr
-                lfp_concat = cell2mat_singleDouble({trials_lfps_temp.lfp}');
-%                 clear cell_arr_tmp
-                %lfp_concat = cell2mat({trials_lfps_temp.lfp}'); % concatenate trials
+                lfp_concat = cell2mat({trials_lfps_temp.lfp}'); % concatenate trials
                 triallen = cellfun(@(x) length(x), {trials_lfps_temp.lfp});
                 sMarkers(:,1) = cumsum([1 triallen(1:end-1)]); sMarkers(:,2) = cumsum(triallen); % demarcate trial onset and end
                 [stats.trialtype.(trialtypes{i})(j).spectrum.psd , stats.trialtype.(trialtypes{i})(j).spectrum.freq] = ...

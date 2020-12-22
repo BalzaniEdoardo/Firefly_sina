@@ -12,25 +12,28 @@ if contains(computer,'MAC')
     prs.filesep = '/';
     prs.filepath_neur = fullfile(mac_path,monkeyInfo.folder,'neural data',prs.filesep);
     prs.filepath_behv = fullfile(mac_path,monkeyInfo.folder,'behavioural data',prs.filesep);
-    
-    
-    
+    prs.filepath_conf = fullfile(mac_path,monkeyInfo.folder,'electrode config',prs.filesep);
     if ~(ischar(prs.filepath_neur))
         prs.filepath_neur = prs.filepath_neur{1};
         prs.filepath_behv = prs.filepath_behv{1};
+        prs.filepath_conf = prs.filepath_conf{1};
     end
     prs.filepath_neur = strrep(prs.filepath_neur,'\','/');
     prs.filepath_behv = strrep(prs.filepath_behv,'\','/');
+    prs.filepath_conf = strrep(prs.filepath_conf,'\','/');
 else
     prs.filesep = '\';
     prs.filepath_neur = fullfile(pc_path,monkeyInfo.folder,'neural data',prs.filesep);
     prs.filepath_behv = fullfile(pc_path,monkeyInfo.folder,'behavioural data',prs.filesep);
+    prs.filepath_conf = fullfile(pc_path,monkeyInfo.folder,'electrode config',prs.filesep);
     if ~(ischar(prs.filepath_neur))
         prs.filepath_neur = prs.filepath_neur{1};
         prs.filepath_behv = prs.filepath_behv{1};
+        prs.filepath_conf = prs.filepath_conf{1};
     end
     prs.filepath_neur = strrep(prs.filepath_neur,'/','\');
     prs.filepath_behv = strrep(prs.filepath_behv,'/','\');
+    prs.filepath_conf = strrep(prs.filepath_conf,'/','\');
 end
 try
     if contains(monkeyInfo.folder,'/')
@@ -75,6 +78,30 @@ else
     prs.FFparams_rewardDur = 9;
     prs.FFparams_flyDuration = nan;
 end
+
+%% more detail about recording system and configuration
+if isfield(monkeyInfo, 'isRipple')
+    if ~isempty(monkeyInfo.isRipple)
+        prs.isRipple = monkeyInfo.isRipple;
+        %prs.electrode_config = monkeyInfo.electrode_config;
+    else
+        prs.isRipple = 0;
+    end
+else
+    prs.isRipple = 0; 
+end
+
+% MT stuff
+if isfield(monkeyInfo, 'MT_border')
+    if ~isempty(monkeyInfo.MT_border)
+        prs.MT_border = monkeyInfo.MT_border;
+    else
+        prs.MT_border = [];
+    end
+else
+    prs.MT_border = [];
+end
+
 %% data acquisition parameters
 prs.fs_smr = 5000/6; % sampling rate of smr file
 prs.fs_lfp = 500; % sampling rate of lfp file
@@ -93,10 +120,10 @@ prs.mintrialduration = 0.5; % to detect bad trials (s)
 prs.electrodespacing = 0.4; %distance (mm) between electrode sites on the array
 
 %% electrode parameters
-prs.linearprobe.types = {'linearprobe16','linearprobe24','linearprobe32'};
-prs.linearprobe.channelcount = [16 24 32];
-prs.utaharray.types = {'utah96','utah2x48'};
-prs.utaharray.channelcount = [96 96];
+prs.linearprobe.types = {'linearprobe16','linearprobe24','linearprobe32', 'linearprobe64'};
+prs.linearprobe.channelcount = [16 24 32 64];
+prs.utaharray.types = {'utah96','utah2x48', 'utah128'};
+prs.utaharray.channelcount = [96 96 128];
 prs.MapDualArray2BrainArea = @(x,y) char((y<=48)*x{1} + (y>48)*x{2});
 
 %% static stimulus parameters
@@ -302,7 +329,7 @@ prs.readout_varname = {'v','w','d','phi','r_targ','theta_targ'}; %,'dv','dw','ey
 %% ****which analyses to do****
 %% behavioural
 prs.split_trials = true; % split trials into different stimulus conditions
-prs.regress_behv = false; % regress response against target position 1
+prs.regress_behv = true; % regress response against target position 1
 prs.regress_eye = false; % regress eye position against target position
 
 %% spikes
@@ -317,10 +344,10 @@ prs.fitGAM_coupled = false; % fit generalised additive models to single neuron r
 prs.fitNNM = false;
 
 %% population analysis
-prs.compute_canoncorr = false; % compute cannonical correlation between population response and task variables 1
-prs.regress_popreadout = false; % regress population activity against individual task variables 1
+prs.compute_canoncorr = true; % compute cannonical correlation between population response and task variables 1
+prs.regress_popreadout = true; % regress population activity against individual task variables 1
 prs.simulate_population = false; % simulate population activity by running the encoding models
-prs.corr_neuronbehverr = false;
+prs.corr_neuronbehverr = true;
 
 %% LFP
 prs.event_potential = true;
@@ -328,9 +355,9 @@ prs.compute_spectrum = true;
 prs.analyse_theta = true;
 prs.analyse_beta = true;
 prs.analyse_alpha = true;
-prs.compute_coherencyLFP = false;
+prs.compute_coherencyLFP = true;
 
 %% Spike-LFP
-prs.analyse_spikeLFPrelation = false;
-prs.analyse_spikeLFPrelation_allLFPs = false; % spike-LFP for LFPs from all electrodes
-prs.analyse_temporalphase = false;
+prs.analyse_spikeLFPrelation = true;
+prs.analyse_spikeLFPrelation_allLFPs = true; % spike-LFP for LFPs from all electrodes
+prs.analyse_temporalphase = true;

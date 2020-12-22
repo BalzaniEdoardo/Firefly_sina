@@ -19,6 +19,7 @@ chno.yre = find(strcmp(ch_title,'RDy')); chno.zre = find(strcmp(ch_title,'RDz'))
 chno.xfp = find(strcmp(ch_title,'FireflyX')); chno.yfp = find(strcmp(ch_title,'FireflyY'));
 chno.xmp = find(strcmp(ch_title,'MonkeyX')); chno.ymp = find(strcmp(ch_title,'MonkeyY'));
 chno.v = find(strcmp(ch_title,'ForwardV')); chno.w = find(strcmp(ch_title,'AngularV'));
+if ~isempty(find(strcmp(ch_title,'FFDraw'), 1)), chno.FFdraw = find(strcmp(ch_title,'FFDraw')); end
 if ~isempty(find(strcmp(ch_title,'Pulse'), 1)), chno.microstim = find(strcmp(ch_title,'Pulse')); end
 
 %% scale
@@ -28,8 +29,12 @@ scaling.yle = data(chno.yle).hdr.adc.Scale; offset.yle = data(chno.yle).hdr.adc.
 scaling.yre = data(chno.yre).hdr.adc.Scale; offset.yre = data(chno.yre).hdr.adc.DC; 
 scaling.zle = data(chno.zle).hdr.adc.Scale; offset.zle = data(chno.zle).hdr.adc.DC; 
 scaling.zre = data(chno.zre).hdr.adc.Scale; offset.zre = data(chno.zre).hdr.adc.DC;
+if isfield(chno, 'FFdraw'), scaling.FFdraw = data(chno.FFdraw).hdr.adc.Scale; offset.FFdraw = data(chno.FFdraw).hdr.adc.DC; end
+try
 scaling.xfp = data(chno.xfp).hdr.adc.Scale; offset.xfp = data(chno.xfp).hdr.adc.DC;
 scaling.yfp = -data(chno.yfp).hdr.adc.Scale; offset.yfp = -data(chno.yfp).hdr.adc.DC;
+catch
+end
 scaling.xmp = data(chno.xmp).hdr.adc.Scale; offset.xmp = data(chno.xmp).hdr.adc.DC;
 scaling.ymp = -data(chno.ymp).hdr.adc.Scale; offset.ymp = -data(chno.ymp).hdr.adc.DC;
 scaling.v = data(chno.v).hdr.adc.Scale; offset.v = data(chno.v).hdr.adc.DC;
@@ -58,9 +63,12 @@ h = h/sum(h); % normalise filter to ensure area under the graph of the data is n
 chnames = fieldnames(chno); MAX_LENGTH = inf; dt = [];
 for i=1:length(chnames)
     if ~any(strcmp(chnames{i},'mrk'))
+        try
         ch.(chnames{i}) = double(data(chno.(chnames{i})).imp.adc)*scaling.(chnames{i}) + offset.(chnames{i});
         dt = [dt prod(data(chno.(chnames{i})).hdr.adc.SampleInterval)];
         MAX_LENGTH = min(length(ch.(chnames{i})),MAX_LENGTH);
+        catch
+        end
     end
 end
 if any(strcmp(chnames,'microstim')), dt_microstim = dt(end); dt(end) = dt(1); end
@@ -72,15 +80,33 @@ end
 
 %% filter position and velocity channels
 for i=1:length(chnames)
-    if ~any(strcmp(chnames{i},{'mrk','yle','yre','zle','zre','microstim'}))
+    if ~any(strcmp(chnames{i},{'mrk','yle','yre','zle','zre','microstim', 'FFdraw'}))
+        try
         ch.(chnames{i}) = conv(ch.(chnames{i})(1:MAX_LENGTH),h,'same');
 %         ch.(chnames{i}) = ch.(chnames{i})(sz/2+1:end);
+        catch
+            if ~any(strcmp(chnames{i},{'mrk','yle','yre','zle','zre','microstim', 'xfp', 'yfp', 'FFdraw'}))
+                ch.(chnames{i}) = conv(ch.(chnames{i})(1:MAX_LENGTH),h,'same');
+            end
+        end
     end
 end
 ch.yle = ch.yle(1:MAX_LENGTH);
 ch.yre = ch.yre(1:MAX_LENGTH);
 ch.zle = ch.zle(1:MAX_LENGTH);
 ch.zre = ch.zre(1:MAX_LENGTH);
+try
+ch.FFdraw = ch.FFdraw(1:MAX_LENGTH);
+catch
+end
+% we are going to add xfp and yfp if they do not exist, to make the rest of
+% the code run as originally intended
+if ~isfield(ch, 'xfp')
+    ch.xfp(size(ch.xmp, 1), 1) = 0;
+    ch.yfp(size(ch.xmp, 1), 1) = 0;
+end
+
+
 ts = dt:dt:length(ch.(chnames{end-1}))*dt;
 if any(strcmp(chnames,'microstim'))
     ts2 = dt_microstim:dt_microstim:length(ch.microstim)*dt_microstim; ch.microstim = interp1(ts2,ch.microstim,ts); 
@@ -147,11 +173,14 @@ t_saccade(diff(t_saccade)<min_isi) = [];
 t.saccade = t_saccade;
 
 %% interpolate nans
+try
 if any(prs.eyechannels == 2) % conditional statement not necessary perhaps
     nanx = isnan(ch.zle); t1 = 1:numel(ch.zle); ch.zle(nanx) = interp1(t1(~nanx), ch.zle(~nanx), t1(nanx), 'pchip');
     nanx = isnan(ch.zre); t1 = 1:numel(ch.zle); ch.zre(nanx) = interp1(t1(~nanx), ch.zre(~nanx), t1(nanx), 'pchip');
     nanx = isnan(ch.yle); t1 = 1:numel(ch.yle); ch.yle(nanx) = interp1(t1(~nanx), ch.yle(~nanx), t1(nanx), 'pchip');
     nanx = isnan(ch.yre); t1 = 1:numel(ch.yre); ch.yre(nanx) = interp1(t1(~nanx), ch.yre(~nanx), t1(nanx), 'pchip');
+end
+catch
 end
 
 %% detect time points of fixation onsets
@@ -168,8 +197,14 @@ t.fix = ts(fixation_switch>0);
 jitter = prs.jitter_marker;
 dPm__dt = [0 ; sqrt(diff(ch.ymp).^2 + diff(ch.xmp).^2)]; % derivative of monkey position
 [~,t_teleport] = findpeaks(dPm__dt,dt*(1:length(dPm__dt)),'MinPeakHeight',prs.minpeakprominence.monkpos); % detect peaks
-dPf__dt = [0 ; sqrt(diff(ch.yfp).^2 + diff(ch.xfp).^2)]; % derivative of firefly position
-[~,t_flyON] = findpeaks(dPf__dt,dt*(1:length(dPf__dt)),'MinPeakHeight',prs.minpeakprominence.flypos); % detect peaks
+if isfield(ch, 'FFdraw')
+    t_flyON = dt*find(diff(ch.FFdraw)>3); % hope you enjoy the hardcode here :)
+    %t_flyON(end+1) = t.beg(end); 
+else
+    dPf__dt = [0 ; sqrt(diff(ch.yfp).^2 + diff(ch.xfp).^2)]; % derivative of firefly position
+    [~,t_flyON] = findpeaks(dPf__dt,dt*(1:length(dPf__dt)),'MinPeakHeight',prs.minpeakprominence.flypos); % detect peaks
+end
+
 t_teleport_trl = nan(length(t.beg),1); t_flyON_trl = nan(length(t.beg),1);
 for i=1:length(t.beg)
     t_teleport_temp = t_teleport(t_teleport > (t.beg(i) - jitter) &  t_teleport < (t.beg(i) + jitter));
@@ -303,8 +338,13 @@ end
 %% downsample continuous data
 for i=1:length(chnames)
     if ~any(strcmp(chnames{i},'mrk'))
-        ch.(chnames{i}) = ch.(chnames{i})(ts>exp_beg & ts<exp_end);
+        try
+        temp = ch.(chnames{i})(ts>exp_beg & ts<exp_end);
+        temp(isnan(temp)) = 0; 
+        ch.(chnames{i}) = temp; 
         ch.(chnames{i}) = decimate(ch.(chnames{i}),prs.factor_downsample);
+        catch
+        end
     end
 end
 ts = ts(ts>exp_beg & ts<exp_end) - exp_beg;

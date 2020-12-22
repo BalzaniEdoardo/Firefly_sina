@@ -434,7 +434,7 @@ if analyse_spikeLFPrelation
     trials_lfps = lfps(prs.channel_id).trials; % only use LFP from the same channel on which the unit was recorded
     % phase analysis
     for i=1:ntrls, trials_lfps(i).phase = angle(hilbert(trials_lfps(i).lfp)); end
-    for i=1:2%length(trialtypes) % i=1:2  => 'all' and 'reward'
+    for i=1:length(trialtypes) % i=1:2  => 'all' and 'reward'
         nconds = length(behv_stats.trialtype.(trialtypes{i}));
         if ~strcmp((trialtypes{i}),'all') && nconds==1, copystats = true; else, copystats = false; end % only one condition means variable was not manipulated
         for j=1:nconds

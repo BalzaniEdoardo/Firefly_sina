@@ -1,4 +1,4 @@
-function [xout,yout]=circcirc(x1,y1,r1,x2,y2,r2)
+function [xout,yout]=circcirc_FAST(x1,y1,r1,x2,y2,r2)
 %CIRCCIRC  Intersections of circles in Cartesian plane
 %
 %  [xout,yout] = CIRCCIRC(x1,y1,r1,x2,y2,r2) finds the points
