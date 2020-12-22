@@ -18,7 +18,10 @@ function PrepareData(this)
 %% convert to struct
 
 for k=1:numel(this.sessions(end).units), units(k) = struct(this.sessions(end).units(k)); end
-for k=1:numel(this.sessions(end).lfps), lfps(k) = struct(this.sessions(end).lfps(k)); end
+if ~all(size(this.sessions(end).lfps) == [0,0])
+    for k=1:numel(this.sessions(end).lfps), lfps(k) = struct(this.sessions(end).lfps(k)); end
+end
+
 trials_behv= this.sessions(end).behaviours.trials;
 behv_stats = this.sessions(end).behaviours.stats;
 
@@ -41,20 +44,27 @@ if prs.addconcat
     data_concat.Yt = Yt;
     data_concat.Xt = xt;
     data_concat.Xt(:,7) = NaN; data_concat.Xt(:,12) = NaN;
-    lfp_phase = [];
-    for k=1:nunits
-        lfp_phase(:,k) = ConcatenateTrials(var_phase{k},[],{trials_spks_temp.tspk},{continuous_temp.ts},timewindow_full);
+    if ~all(size(this.sessions(end).lfps) == [0,0])
+        lfp_phase = [];
+        for k=1:nunits
+            lfp_phase(:,k) = ConcatenateTrials(var_phase{k},[],{trials_spks_temp.tspk},{continuous_temp.ts},timewindow_full);
+        end
+        data_concat.lfp_phase = lfp_phase;
     end
-    data_concat.lfp_phase = lfp_phase;
     
     cd(prs.filepath_neur);
-    disp(['Saving exported data: ', exportname]);
-    save(exportname,'behv_stats','data_concat','lfps','prs','trials_behv','units');
+    if ~all(size(this.sessions(end).lfps) == [0,0])
+        disp(['Saving exported data: ', exportname]);
+        save(exportname,'behv_stats','data_concat','lfps','prs','trials_behv','units');
     
+    else
+        disp(['Saving exported data: ', exportname]);
+        save(exportname,'behv_stats','data_concat','prs','trials_behv','units');
+    end
 %     save([prs.sess_date,'.mat'],'behv_stats','data_concat','lfps','prs','trials_behv','units');
 else
     cd(prs.filepath_neur);
-    if prs.compute_spectrum
+    if prs.compute_spectrum && ~all(size(this.sessions(end).lfps) == [0,0])
 
         % flag that determines if it the phase or the analytic signal is extracted 
         is_phase = false;
@@ -114,6 +124,9 @@ else
         save(exportname2,'lfp_alpha','is_phase');
         exportname2 = ['lfp_theta_','m',num2str(monk_id),'s',num2str(sess_id),'.mat'];
         save(exportname2,'lfp_theta','is_phase');
+   elseif all(size(this.sessions(end).lfps) == [0,0])
+        disp(['Saving exported data: ', exportname]);
+        save(exportname,'behv_stats','prs','trials_behv','units');
    else
         disp(['Saving exported data: ', exportname]);
         
