@@ -29,6 +29,8 @@ monk_id = this.sessions(end).monk_id;
 sess_id = this.sessions(end).sess_id;
 exportname = ['m',num2str(monk_id),'s',num2str(sess_id),'.mat'];
 prs = default_prs(monk_id,sess_id);
+file_path = fullfile(prs.filepath_neur,'Pre-processing X E');
+cd(file_path)
 %% Export after analysis
 
 % for k=1:numel(experiments.sessions.units), units(k) = struct(experiments.sessions.units(k)); end
