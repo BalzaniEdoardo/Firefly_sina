@@ -4,7 +4,6 @@ clc;
 % cd 'C:\Users\lab\Documents\Savin-Angelaki\Firefly_sina'
 %cd 'C:\Users\eb162\Firefly_sina\firefly-monkey'
 cd '/Users/edoardo/Work/Code/Firefly_sina/neuroGAM'
-
 % Save the for the repo
 if contains(computer,'MAC')
     separ = '/';
@@ -33,11 +32,14 @@ save('monkey_info.mat','monkeyInfo')
 
 monk_id = 53;
 sess_list = [90];%2:26;
-
+load('fit_list.mat')
 
 not_done = [];
 except_struct = struct();
-for session_id = sess_list
+for kk = 1:length(session)
+    
+        session_id = session(kk);
+        monk_id = monkey(kk);
         experiments = experiment('firefly-monkey');
         
         try
